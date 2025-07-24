@@ -3,9 +3,9 @@ import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './firebase'
 
 export const api = Axios.create({
-  baseURL: process.env.API_URL ? '/coach_api' : 'http://localhost:3000',
+  // baseURL: process.env.API_URL ? '/coach_api' : 'http://localhost:3000',
   // baseURL: '/coach_api', // <<< ESTA É A MUDANÇA CRÍTICA!
-  // baseURL: process.env.NEXT_PUBLIC_API_URL,
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
   // baseURL: process.env.API_URL,
 })
 
