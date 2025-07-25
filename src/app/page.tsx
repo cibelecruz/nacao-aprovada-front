@@ -107,7 +107,7 @@ export default function Home() {
               onClick={() => setRecoverPassword(true)}
               className="text-blue-400 font-semibold text-sm hover:underline"
             >
-              Esqueceu a senha?
+              Esqueceu a senha? | Primeiro acesso?
             </button>
           </div>
 
