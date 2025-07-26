@@ -101,7 +101,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="w-full text-right">
+          <div className="w-full flex flex-col gap-4 text-right">
             <button
               type="button"
               onClick={() => setRecoverPassword(true)}
