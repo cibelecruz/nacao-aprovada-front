@@ -76,7 +76,7 @@ export default function StudentRegitration() {
           action: {
             label: 'Ver aluno',
             onClick: () =>
-              router.push(`/coach/student-profile/${response.data.id._value}`),
+              router.push(`/coach/student-profile/${response.data}`),
           },
         })
       })
