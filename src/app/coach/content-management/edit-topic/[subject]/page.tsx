@@ -135,7 +135,7 @@ export default function EditSubjects() {
     api
       .post('/subjects/register-subject-customizations', dataPost)
       .then(() => {
-        toast.success('Topicos salvos com sucesso')
+        toast.success('Tópicos salvos com sucesso')
       })
       .catch((e) => toast.error(`Erro ao salvar tópicos: ${e}`))
 
