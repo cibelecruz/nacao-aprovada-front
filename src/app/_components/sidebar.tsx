@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from 'next/navigation'
 import type { ReactNode } from 'react'
 import { LogoSVG } from './icons/logo'
+import { ToggleThemeButton } from './toggleTheme'
 
 interface SidebarButton {
   icon: ReactNode
@@ -84,6 +85,8 @@ function SidebarDesktop({ buttons }: SidebarProps) {
             </button>
           )
         })}
+
+        <ToggleThemeButton />
       </div>
     </div>
   )
