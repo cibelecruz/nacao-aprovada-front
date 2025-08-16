@@ -85,8 +85,6 @@ function SidebarDesktop({ buttons }: SidebarProps) {
             </button>
           )
         })}
-
-        <ToggleThemeButton />
       </div>
     </div>
   )

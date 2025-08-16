@@ -20,6 +20,10 @@ import {
   DropdownMenuTrigger,
 } from './ui/dropdown-menu'
 import Image from 'next/image'
+import { useTheme } from 'next-themes'
+import { Select, SelectContent, SelectItem, SelectTrigger } from './ui/select'
+import { Button } from './ui/button'
+import { Moon, Sun } from 'lucide-react'
 
 interface AvatarDropdownProps {
   imageUrl?: string
@@ -38,6 +42,7 @@ export function AvatarDropdown({
 }: AvatarDropdownProps) {
   const { setCourseSelected } = useCourseContext()
   const [courseSelect, setCourseSelect] = useState('')
+  const { setTheme, theme } = useTheme()
 
   return (
     <DropdownMenu>
