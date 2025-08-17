@@ -61,7 +61,7 @@ export default function Home() {
   }
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
+    <div className="w-screen h-screen flex justify-center items-center bg-white dark:bg-blue-900">
       <div className="flex flex-col justify-center items-center gap-16 max-w-sm">
         <div>
           <Image
