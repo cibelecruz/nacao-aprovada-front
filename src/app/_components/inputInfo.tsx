@@ -56,7 +56,7 @@ export function InputInfo({
           type={type === 'date' || type === 'cpf' ? 'text' : 'text'}
           value={value}
           placeholder={placeholder}
-          className=" flex-grow px-3 py-2 bg-transparent border border-gray-800 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+          className=" flex-grow px-3 py-2 bg-transparent border border-gray-800 rounded-md text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
           style={{ WebkitAppearance: 'none', MozAppearance: 'textfield' }}
           id={label}
         />
