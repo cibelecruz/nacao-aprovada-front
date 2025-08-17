@@ -116,7 +116,7 @@ export function DialogCreateNotification({
         onInteractOutside={(e) => {
           e.preventDefault()
         }}
-        className="bg-[#050c16] text-white space-y-6"
+        className="bg-white dark:bg-[#050c16] text-black dark:text-white space-y-6"
       >
         <DialogHeader>
           <DialogTitle className="text-yellow-600">
@@ -129,7 +129,7 @@ export function DialogCreateNotification({
           className="space-y-8"
         >
           <div className="flex flex-col gap-2">
-            <label htmlFor="title" className="text-white font-bold">
+            <label htmlFor="title" className="text-zinc-600 dark:text-white font-bold">
               Título:
             </label>
             <input
@@ -140,7 +140,7 @@ export function DialogCreateNotification({
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label htmlFor="description" className="text-white font-bold">
+            <label htmlFor="description" className="text-zinc-600 dark:text-white font-bold">
               Descrição:
             </label>
             <input
@@ -152,13 +152,13 @@ export function DialogCreateNotification({
           </div>
 
           <div className="space-y-2">
-            <p className="text-white text-bold">Você deseja notificar para:</p>
+            <p className="text-black dark:text-white text-bold">Você deseja notificar para:</p>
             <RadioGroup
               required
               onValueChange={(value: 'all' | 'one') =>
                 setNotificationTarget(value)
               }
-              className="text-white flex"
+              className="text-black dark:text-white flex"
             >
               <div className="flex gap-2 items-center justify-between text-sm">
                 <RadioGroupItem id="all" value="all" />
@@ -193,7 +193,7 @@ export function DialogCreateNotification({
                     .concat(selectedCourse.jobPosition)}
                 </SelectTrigger>
 
-                <SelectContent className="bg-[#050c16] text-white">
+                <SelectContent className="bg-white dark:bg-[#050c16] text-black dark:text-white">
                   {courseList.map((course) => (
                     <SelectItem key={course.id} value={course.id}>
                       {course.institution
@@ -207,7 +207,7 @@ export function DialogCreateNotification({
           )}
 
           <div className="flex flex-col gap-2">
-            <label htmlFor="date" className="text-white font-bold">
+            <label htmlFor="date" className="text-zinc-600 dark:text-white font-bold">
               Período de exibição:
             </label>
             <div className="flex justify-between items-center">
