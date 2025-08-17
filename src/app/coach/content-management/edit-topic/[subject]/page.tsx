@@ -165,7 +165,7 @@ export default function EditSubjects() {
           <EditableText
             text={newSubjectName}
             setText={setNewSubjectName}
-            className="-7 text-lg font-bold"
+            className="-7 text-lg font-bold text-black dark:text-white"
           />
 
           <DialogDeleteSubjectCourse
@@ -188,7 +188,7 @@ export default function EditSubjects() {
           />
           <Button label="Adicionar Tópico" onClick={() => addTopic()} />
         </div>
-        <table className="mt-5 w-full">
+        <table className="mt-5 w-full dark:text-white text-black">
           <thead className="text-left justify-between">
             <tr>
               <th className="sr-only w-3/6">None</th>
@@ -222,18 +222,18 @@ export default function EditSubjects() {
                 Salvar
               </ConfirmButton>
             </DialogTrigger>
-            <DialogContent className="bg-[#050c16] border-none rounded-3xl w-max lg:w-1/4">
+            <DialogContent className="bg-white dark:bg-[#050c16] text-black dark:text-white border-none rounded-3xl w-max lg:w-1/4">
               <DialogHeader>
                 <DialogTitle>Desejar salvar alterações?</DialogTitle>
               </DialogHeader>
               <DialogFooter className="flex">
                 <DialogClose asChild>
-                  <ConfirmButton onClick={() => post()} className="w-32 mt-4">
-                    Salvar
-                  </ConfirmButton>
+                  <CancelButton className="w-32 mt-4">Cancelar</CancelButton>
                 </DialogClose>
                 <DialogClose asChild>
-                  <CancelButton className="w-32 mt-4">Cancelar</CancelButton>
+                  <ConfirmButton onClick={() => post()} className="w-32 mt-4 text-white">
+                    Salvar
+                  </ConfirmButton>
                 </DialogClose>
               </DialogFooter>
             </DialogContent>

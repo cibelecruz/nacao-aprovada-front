@@ -81,7 +81,7 @@ export function TopicTbodyList({ topic, onUpdate }: topicTbodyListProps) {
   return (
     <tr
       data-active={topic.active}
-      className="rounded hover:bg-gray-700 data-[active=false]:opacity-30 transition-all"
+      className="rounded hover:bg-zinc-100 hover:dark:bg-gray-700/40 data-[active=false]:opacity-30 transition-all"
     >
       <td className="flex items-center gap-3 p-3">
         <Switch
