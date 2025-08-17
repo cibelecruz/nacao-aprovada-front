@@ -38,28 +38,28 @@ export default function RootLayout({
 
   const studentButtons = [
     {
-      icon: <List className="z-10 relative size-6" />,
+      icon: <List className="z-10 relative size-6 text-black dark:text-white" />,
       href: '/coach',
       title: 'Tabela de alunos',
     },
     {
-      icon: <Settings className="z-10 relative size-6" />,
+      icon: <Settings className="z-10 relative size-6 text-black dark:text-white" />,
       href: '/coach/content-management',
       title: 'Gerenciamento de conteúdo',
     },
 
     {
-      icon: <UserRoundPlus className="z-10 relative size-6" />,
+      icon: <UserRoundPlus className="z-10 relative size-6 text-black dark:text-white" />,
       href: '/coach/student-registration',
       title: 'Cadastro de aluno',
     },
     {
-      icon: <Bell className="z-10 relative size-6" />,
+      icon: <Bell className="z-10 relative size-6 text-black dark:text-white" />,
       href: '/coach/notifications-maneger',
       title: 'Gerenciamento de notificações',
     },
     {
-      icon: <BookOpenText className="z-10 relative size-6" />,
+      icon: <BookOpenText className="z-10 relative size-6 text-black dark:text-white" />,
       href: '/coach/help-content',
       title: 'Gerenciar conteúdo de ajuda',
     },
