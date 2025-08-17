@@ -52,7 +52,7 @@ export default function HelpContentForm() {
       return toast({
         title: 'Por favor, adicione o conteúdo da página.',
         description: 'Você não atualizou o conteúdo que vai ficar na pagina',
-        className: 'bg-blue-600/20 text-white',
+        className: 'bg-white dark:bg-blue-600/20 text-black dark:text-white',
         duration: 1500,
       })
     }
@@ -90,14 +90,14 @@ export default function HelpContentForm() {
             className="w-full space-y-8"
           >
             <div className="flex flex-col space-y-2">
-              <label htmlFor="title" className="font-medium text-white">
+              <label htmlFor="title" className="font-medium text-black dark:text-white">
                 Titulo
               </label>
               <input
                 {...register('title')}
                 id="title"
                 placeholder="Digite o titulo do conteúdo"
-                className=" flex-grow px-3 py-2 bg-transparent border border-gray-800 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                className=" flex-grow px-3 py-2 bg-transparent border border-gray-800 rounded-md text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
               />
               {errors.title && (
                 <p className="text-sm text-red-500">{errors.title.message}</p>
@@ -105,7 +105,7 @@ export default function HelpContentForm() {
             </div>
 
             <div className="flex flex-col space-y-2">
-              <label htmlFor="videoUrl" className="font-medium text-white">
+              <label htmlFor="videoUrl" className="font-medium text-black dark:text-white">
                 Link do video
               </label>
               <input
@@ -132,7 +132,7 @@ export default function HelpContentForm() {
                   inputElement.setCustomValidity('')
                 }}
                 placeholder="Cole a URL do video do YouTube"
-                className=" flex-grow px-3 py-2 bg-transparent border border-gray-800 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                className=" flex-grow px-3 py-2 bg-transparent border border-gray-800 rounded-md text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
               />
               {errors.videoUrl && (
                 <p className="text-sm text-red-500">
@@ -141,7 +141,7 @@ export default function HelpContentForm() {
               )}
             </div>
 
-            <div className="container text-black">
+            <div className="container bg-blue-800 rounded-xl dark:bg-transparent text-black">
               <ReactMde
                 value={value}
                 onChange={setValue}

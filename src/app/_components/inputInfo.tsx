@@ -49,7 +49,7 @@ export function InputInfo({
 
   return (
     <div className="flex flex-col w-full gap-1">
-      <label htmlFor={label}>{label}</label>
+      <label htmlFor={label} className="text-black dark:text-white">{label}</label>
       <div className="flex">
         <input
           onChange={handleInputChange}
