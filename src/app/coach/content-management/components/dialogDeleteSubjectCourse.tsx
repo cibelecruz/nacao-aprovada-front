@@ -55,10 +55,10 @@ export function DialogDeleteSubjectCourse({
       </DialogTrigger>
       <DialogContent
         onClick={(e) => e.stopPropagation()}
-        className="bg-[#050c16] border-none rounded-3xl w-max lg:w-1/4"
+        className="bg-white text-gray-600 dark:text-white dark:bg-[#050c16] border-none rounded-3xl w-max lg:w-1/4"
       >
         <DialogHeader>
-          <DialogTitle>
+          <DialogTitle className='text-black dark:text-white'>
             Desejar excluir {isSubject ? 'a disciplina' : 'o plano de estudos'}?
           </DialogTitle>
         </DialogHeader>

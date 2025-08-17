@@ -55,9 +55,9 @@ export function NavigationTable({
   }
   return (
     <>
-      <div className="w-full mt-5 rounded-lg border border-blue-400/60 overflow-hidden">
+      <div className="w-full mt-5 rounded-lg border border-black dark:border-blue-400/60 overflow-hidden">
         <table className="w-full text-left">
-          <thead className="text-gray-500">
+          <thead className="text-gray-600 dark:text-zinc-400">
             <tr>
               {header.map((item, index) => {
                 return (
@@ -67,7 +67,7 @@ export function NavigationTable({
                   >
                     {item === 'actions'
                       ? 'Ações'
-                      : item === 'check'
+                      : item === 'check'  
                         ? 'Ativo'
                         : item}
                   </th>
@@ -85,7 +85,7 @@ export function NavigationTable({
 
               return (
                 <tr
-                  className="hover:bg-slate-700 text-base border-y border-y-blue-400/60 cursor-pointer w-full px-2"
+                  className="hover:bg-zinc-300 hover:dark:bg-slate-700 text-black dark:text-white text-base border-y border-y-blue-400/60 cursor-pointer w-full px-2"
                   key={item.key}
                   onClick={() => link && router.push(link?.concat(item.key))}
                 >
@@ -132,13 +132,14 @@ export function NavigationTable({
           <div className="flex flex-col items-center">
             <button
               className="flex items-center justify-center hover:text-yellow-700"
-              onClick={() => setCounter(counter === 1 ? 5 : counter + 5)}
+              onClick={() => setCounter(counter > 5 ? counter - 5 : 1)}
             >
               <ChevronUp size={15} />
             </button>
             <button
               className="flex items-center justify-center hover:text-yellow-700"
-              onClick={() => setCounter(counter > 5 ? counter - 5 : 1)}
+              onClick={() => setCounter(counter === 1 ? 5 : counter + 5)}
+
             >
               <ChevronDown size={15} />
             </button>
