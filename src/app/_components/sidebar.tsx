@@ -46,7 +46,7 @@ function SidebarDesktop({ buttons }: SidebarProps) {
   const router = useRouter()
   const pathname = usePathname()
   return (
-    <div className="max-md:hidden z-50 space-y-10 pt-6 h-screen rounded-r-lg fixed bg-[#070E17] w-20 flex flex-col items-center justify-start p-3">
+    <div className="max-md:hidden z-50 space-y-10 pt-6 h-screen rounded-r-lg fixed bg-white border-r border-zinc-100 dark:border-transparent dark:bg-[#070E17] w-20 flex flex-col items-center justify-start p-3">
       <LogoSVG />
 
       <div className="flex flex-col items-center gap-2">
@@ -76,7 +76,7 @@ function SidebarDesktop({ buttons }: SidebarProps) {
                   router.push(button.href)
                 }
               }}
-              className={`relative group hover:text-white p-2 ${isActive ? 'bg-yellow-600 rounded-lg text-black' : 'hover:text-white'} transition-all`}
+              className={`relative group hover:text-black hover:dark:text-white p-2 ${isActive ? 'bg-yellow-600 rounded-lg text-black' : 'hover:text-white'} transition-all`}
               title={button.title}
             >
               <span className="absolute inset-0 bg-yellow-600/60 backdrop-blur-sm rounded-lg opacity-0 group-hover:opacity-100 transition-all"></span>

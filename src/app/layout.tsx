@@ -7,6 +7,7 @@ import { AuthProvider } from './context/authContext'
 import { Toaster } from './_components/ui/toaster'
 import { NotificationProvider } from './context/notificationContext'
 import { WebVitals } from '@/app/_components/web-vitals'
+import { ThemeProvider } from './_components/theme-provider'
 
 export const metadata: Metadata = {
   title: 'Nação Aprovada',
@@ -23,28 +24,35 @@ export default function RootLayout({
     <html lang="pt-br" translate="no">
       <body
         className={
-          'font-roboto antialiased text-lg bg-blue-950 text-zinc-50 overflow-x-hidden'
+          'font-roboto antialiased text-lg bg-white dark:bg-blue-950 text-zinc-50 overflow-x-hidden'
         }
       >
-        <NotificationProvider>
-          <AuthProvider>
-            <ToasterSonner
-              theme="dark"
-              position="top-right"
-              toastOptions={{
-                style: {
-                  background: '#1E2A47',
-                  border: '1px solid #3A4B6D',
-                  color: 'white',
-                  boxShadow: '0 0 10px rgba(245, 176, 66, 0.3)',
-                },
-              }}
-            />
-            <WebVitals />
-            <Toaster />
-            {children}
-          </AuthProvider>
-        </NotificationProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NotificationProvider>
+            <AuthProvider>
+              <ToasterSonner
+                theme="dark"
+                position="top-right"
+                toastOptions={{
+                  style: {
+                    background: '#1E2A47',
+                    border: '1px solid #3A4B6D',
+                    color: 'white',
+                    boxShadow: '0 0 10px rgba(245, 176, 66, 0.3)',
+                  },
+                }}
+              />
+              <WebVitals />
+              <Toaster />
+              {children}
+            </AuthProvider>
+          </NotificationProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

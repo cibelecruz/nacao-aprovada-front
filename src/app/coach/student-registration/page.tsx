@@ -50,9 +50,16 @@ export default function StudentRegitration() {
   }, [])
 
   const isDesabledButton = useMemo(() => {
-    if (!userName || !email || assignedCourses.length === 0) return true
+    if (
+      !userName ||
+      !email ||
+      assignedCourses.length === 0 ||
+      !cpf ||
+      !preferedStartDate
+    )
+      return true
     else return false
-  }, [userName, email, assignedCourses])
+  }, [userName, email, assignedCourses, cpf, preferedStartDate])
 
   function creatStudent() {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -76,7 +83,7 @@ export default function StudentRegitration() {
           action: {
             label: 'Ver aluno',
             onClick: () =>
-              router.push(`/coach/student-profile/${response.data.id._value}`),
+              router.push(`/coach/student-profile/${response.data}`),
           },
         })
       })
@@ -89,7 +96,7 @@ export default function StudentRegitration() {
     <PageContainer>
       <ContentContainer>
         <TitlePage className="text-yellow-600" title="Cadastro de Aluno" />
-        <div className="rounded-lg p-4 h-max flex flex-col space-y-4">
+        <div className="rounded-lg text-black dark:text-white p-4 h-max flex flex-col space-y-4">
           <InputInfo
             label="Nome:"
             type="text"
@@ -134,10 +141,10 @@ export default function StudentRegitration() {
                     className="text-base text-gray-400 items-center"
                     key={userCourse.id}
                   >
-                    <div className="flex bg-blue-800 text-white w-max p-2 rounded-xl border border-yellow-800 gap-4">
+                    <div className="flex text-black dark:text-white dark:bg-blue-800 w-max p-2 rounded-xl border border-black dark:border-yellow-800 gap-4">
                       {userCourse.name}
                       <button
-                        className="text-white hover:text-red-600 transition-all"
+                        className="text-black dark:text-white hover:text-red-600 transition-all"
                         onClick={() =>
                           setAssignedCourses(
                             assignedCourses.filter(

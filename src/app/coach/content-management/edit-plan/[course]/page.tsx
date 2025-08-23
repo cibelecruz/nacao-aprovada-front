@@ -106,10 +106,10 @@ export default function EditCourse() {
             <EditNameCourse
               name={newCourseName}
               setName={setNewCourseName}
-              className="-7 text-lg font-bold"
+              className="-7 text-lg font-bold text-black dark:text-white"
             />
 
-            <p className="text-xs text-gray-400">
+            <p className="text-xs text-gray-500">
               {course?.subjects.length} diciplina(s)
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function EditCourse() {
             name={newCourseName}
             id={String(idCourse.course)}
             label={<Trash2 className="text-red-600" />}
-            className="w-auto px-3 h-8 mt-8 rounded hover:bg-gray-600 hover:border-gray-600 transition-all mb-3"
+            className="w-auto px-3 h-8 mt-8 rounded transition-all mb-3"
             route={true}
             isSubject={false}
           />

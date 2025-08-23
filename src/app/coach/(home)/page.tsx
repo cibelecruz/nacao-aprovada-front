@@ -257,7 +257,7 @@ export default function UserList() {
     <PageContainer>
       <ContentContainer>
         <TitlePage className="text-yellow-600" title="Painel dos alunos" />
-        <p className="text-gray-300">
+        <p className="text-gray-500 dark:text-gray-300">
           Visualize o panorama geral de todos os alunos matriculados
         </p>
         {loader ? (
@@ -301,7 +301,7 @@ export default function UserList() {
                     <TooltipTrigger asChild>
                       <button
                         onClick={handleAddUsersFile}
-                        className="bg-yellow-600 mb-1 hover:bg-yellow-500 p-2 h-max rounded-lg"
+                        className="bg-yellow-400 dark:bg-yellow-600 mb-1 hover:bg-yellow-300 hover:dark:bg-yellow-500 p-2 h-max rounded-lg"
                       >
                         <UserPlus className="size-5 text-black" />
                         <input
@@ -373,14 +373,14 @@ export default function UserList() {
                       toast.error('Erro ao exportar dados:')
                     }
                   }}
-                  className="bg-yellow-600 mb-1 hover:bg-yellow-500 p-2 h-max rounded-lg text-black"
+                  className="dark:bg-yellow-600 bg-yellow-500 mb-1 hover:bg-yellow-400 hover:dark:bg-yellow-500 p-2 h-max rounded-lg text-black"
                 >
                   <FolderInput className="size-5" />
                 </button>
               </div>
             </div>
 
-            <div className="w-full mt-5 rounded-lg border border-blue-400/60 overflow-hidden">
+            <div className="w-full mt-5 rounded-lg border border-black dark:border-blue-400/60 overflow-hidden">
               <table className="w-full text-left">
                 <thead className="text-gray-500">
                   <tr>
@@ -404,7 +404,7 @@ export default function UserList() {
                             Previsto <ChevronsUpDown size={17} />
                           </button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent className="bg-slate-800 text-gray-300">
+                        <DropdownMenuContent className="bg-white dark:bg-slate-800 text-black dark:text-gray-300">
                           <DropdownMenuLabel>Previsto</DropdownMenuLabel>
                           <DropdownMenuSeparator />
                           <DropdownMenuRadioGroup
@@ -432,7 +432,7 @@ export default function UserList() {
                             Realizado <ChevronsUpDown size={17} />
                           </button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent className="bg-slate-800 text-gray-300">
+                        <DropdownMenuContent className="bg-white dark:bg-slate-800 text-black dark:text-gray-300">
                           <DropdownMenuLabel>Realizado</DropdownMenuLabel>
                           <DropdownMenuSeparator />
                           <DropdownMenuRadioGroup

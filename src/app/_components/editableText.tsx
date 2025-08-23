@@ -57,7 +57,7 @@ export function EditableText({ text, setText, className }: EditableTextProps) {
         <Tooltip>
           <TooltipTrigger>
             <SquarePen
-              className="cursor-pointer"
+              className="cursor-pointer dark:text-white text-black"
               onClick={() => setIsEditing(true)}
             />
           </TooltipTrigger>

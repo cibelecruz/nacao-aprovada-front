@@ -87,7 +87,10 @@ export default function EditContentPage() {
             />
 
             <div className="flex flex-col space-y-2">
-              <label htmlFor="videoUrl" className="font-medium text-white">
+              <label
+                htmlFor="videoUrl"
+                className="font-medium text-black dark:text-white"
+              >
                 Link do video
               </label>
               <input
@@ -116,11 +119,11 @@ export default function EditContentPage() {
                   setVideoUrl(event.target.value)
                 }}
                 placeholder="Cole a URL do video do YouTube"
-                className=" flex-grow px-3 py-2 bg-transparent border border-gray-800 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                className=" flex-grow px-3 py-2 bg-transparent border border-gray-800 rounded-md text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
               />
             </div>
 
-            <div className="container text-black">
+            <div className="container rounded-xl bg-blue-800 dark:bg-transparent text-black">
               <ReactMde
                 value={value}
                 onChange={setValue}

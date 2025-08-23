@@ -19,6 +19,8 @@ export async function POST(req: Request) {
 
   const response = await fetch(
     process.env.NEXT_PUBLIC_API_URL + '/help-content/ia',
+    // process.env.API_URL + '/help-content/ia',
+
     {
       cache: 'force-cache',
       next: {
