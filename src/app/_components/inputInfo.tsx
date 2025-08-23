@@ -49,9 +49,13 @@ export function InputInfo({
 
   return (
     <div className="flex flex-col w-full gap-1">
+<<<<<<< HEAD
       <label htmlFor={label} className="text-black dark:text-white">
         {label}
       </label>
+=======
+      <label htmlFor={label} className="text-black dark:text-white">{label}</label>
+>>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
       <div className="flex">
         <input
           onChange={handleInputChange}

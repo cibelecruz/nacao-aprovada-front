@@ -231,10 +231,14 @@ export default function EditSubjects() {
                   <CancelButton className="w-32 mt-4">Cancelar</CancelButton>
                 </DialogClose>
                 <DialogClose asChild>
+<<<<<<< HEAD
                   <ConfirmButton
                     onClick={() => post()}
                     className="w-32 mt-4 text-white"
                   >
+=======
+                  <ConfirmButton onClick={() => post()} className="w-32 mt-4 text-white">
+>>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
                     Salvar
                   </ConfirmButton>
                 </DialogClose>

@@ -67,7 +67,7 @@ export function NavigationTable({
                   >
                     {item === 'actions'
                       ? 'Ações'
-                      : item === 'check'
+                      : item === 'check'  
                         ? 'Ativo'
                         : item}
                   </th>
@@ -139,6 +139,10 @@ export function NavigationTable({
             <button
               className="flex items-center justify-center hover:text-yellow-700"
               onClick={() => setCounter(counter === 1 ? 5 : counter + 5)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
             >
               <ChevronDown size={15} />
             </button>

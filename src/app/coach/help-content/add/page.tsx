@@ -90,10 +90,14 @@ export default function HelpContentForm() {
             className="w-full space-y-8"
           >
             <div className="flex flex-col space-y-2">
+<<<<<<< HEAD
               <label
                 htmlFor="title"
                 className="font-medium text-black dark:text-white"
               >
+=======
+              <label htmlFor="title" className="font-medium text-black dark:text-white">
+>>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
                 Titulo
               </label>
               <input
@@ -108,10 +112,14 @@ export default function HelpContentForm() {
             </div>
 
             <div className="flex flex-col space-y-2">
+<<<<<<< HEAD
               <label
                 htmlFor="videoUrl"
                 className="font-medium text-black dark:text-white"
               >
+=======
+              <label htmlFor="videoUrl" className="font-medium text-black dark:text-white">
+>>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
                 Link do video
               </label>
               <input

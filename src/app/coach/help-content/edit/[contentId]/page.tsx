@@ -87,10 +87,14 @@ export default function EditContentPage() {
             />
 
             <div className="flex flex-col space-y-2">
+<<<<<<< HEAD
               <label
                 htmlFor="videoUrl"
                 className="font-medium text-black dark:text-white"
               >
+=======
+              <label htmlFor="videoUrl" className="font-medium text-black dark:text-white">
+>>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
                 Link do video
               </label>
               <input
