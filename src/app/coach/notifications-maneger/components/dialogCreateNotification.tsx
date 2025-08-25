@@ -129,14 +129,10 @@ export function DialogCreateNotification({
           className="space-y-8"
         >
           <div className="flex flex-col gap-2">
-<<<<<<< HEAD
             <label
               htmlFor="title"
               className="text-zinc-600 dark:text-white font-bold"
             >
-=======
-            <label htmlFor="title" className="text-zinc-600 dark:text-white font-bold">
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
               Título:
             </label>
             <input
@@ -147,14 +143,10 @@ export function DialogCreateNotification({
             />
           </div>
           <div className="flex flex-col gap-2">
-<<<<<<< HEAD
             <label
               htmlFor="description"
               className="text-zinc-600 dark:text-white font-bold"
             >
-=======
-            <label htmlFor="description" className="text-zinc-600 dark:text-white font-bold">
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
               Descrição:
             </label>
             <input
@@ -166,13 +158,9 @@ export function DialogCreateNotification({
           </div>
 
           <div className="space-y-2">
-<<<<<<< HEAD
             <p className="text-black dark:text-white text-bold">
               Você deseja notificar para:
             </p>
-=======
-            <p className="text-black dark:text-white text-bold">Você deseja notificar para:</p>
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
             <RadioGroup
               required
               onValueChange={(value: 'all' | 'one') =>
@@ -227,14 +215,10 @@ export function DialogCreateNotification({
           )}
 
           <div className="flex flex-col gap-2">
-<<<<<<< HEAD
             <label
               htmlFor="date"
               className="text-zinc-600 dark:text-white font-bold"
             >
-=======
-            <label htmlFor="date" className="text-zinc-600 dark:text-white font-bold">
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
               Período de exibição:
             </label>
             <div className="flex justify-between items-center">

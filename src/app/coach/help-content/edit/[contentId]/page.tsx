@@ -9,7 +9,7 @@ import { useRouter, useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import ReactMde from 'react-mde'
 import { Converter } from 'showdown'
-import 'react-mde/lib/styles/css/react-mde-all.css'
+import '@/app/css/react-mde-all.css'
 import { toast } from 'sonner'
 import { PageContainer } from '@/app/_components/pageContainer'
 import { ContentContainer } from '@/app/_components/contentContainer'
@@ -87,14 +87,10 @@ export default function EditContentPage() {
             />
 
             <div className="flex flex-col space-y-2">
-<<<<<<< HEAD
               <label
                 htmlFor="videoUrl"
                 className="font-medium text-black dark:text-white"
               >
-=======
-              <label htmlFor="videoUrl" className="font-medium text-black dark:text-white">
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
                 Link do video
               </label>
               <input
@@ -127,7 +123,7 @@ export default function EditContentPage() {
               />
             </div>
 
-            <div className="container rounded-xl bg-blue-800 dark:bg-transparent text-black">
+            <div className="container bg-blue-800 rounded-xl dark:bg-transparent text-black">
               <ReactMde
                 value={value}
                 onChange={setValue}

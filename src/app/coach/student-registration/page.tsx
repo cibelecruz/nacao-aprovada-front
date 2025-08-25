@@ -50,7 +50,6 @@ export default function StudentRegitration() {
   }, [])
 
   const isDesabledButton = useMemo(() => {
-<<<<<<< HEAD
     if (
       !userName ||
       !email ||
@@ -59,9 +58,6 @@ export default function StudentRegitration() {
       !preferedStartDate
     )
       return true
-=======
-    if (!userName || !email || assignedCourses.length === 0 || !cpf || !preferedStartDate) return true
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
     else return false
   }, [userName, email, assignedCourses, cpf, preferedStartDate])
 
