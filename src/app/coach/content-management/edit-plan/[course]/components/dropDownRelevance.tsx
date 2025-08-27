@@ -19,12 +19,12 @@ export function DropDownRelevance({
 }: DropDownRelevanceProps) {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <button className="flex items-center w-10 h-8 justify-center gap-2 border border-gray-400 rounded-md py-1 px-2 hover:text-yellow-700">
+      <DropdownMenuTrigger onClick={(e) => e.stopPropagation()}  asChild>
+        <button onClick={(e) => e.stopPropagation()} className="flex items-center w-10 h-8 justify-center gap-2 text-black dark:text-white border border-gray-400 rounded-md py-1 px-2 hover:text-yellow-700">
           {relevance} <ChevronDown size={17} />
         </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-slate-800 text-white">
+      <DropdownMenuContent className="dark:bg-slate-800 bg-white text-black dark:text-white">
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup
           value={String(relevance)}

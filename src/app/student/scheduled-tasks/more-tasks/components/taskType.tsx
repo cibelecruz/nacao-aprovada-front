@@ -56,12 +56,12 @@ export function TaskType({
   ]
   return (
     <>
-      <TitlePage title="Que tipo de atividade deseja adicionar no seu dia?" />
+      <TitlePage title="Que tipo de atividade deseja adicionar no seu dia?" className='dark:text-white text-black' />
       <Select onValueChange={handleOnChangeCourse}>
-        <SelectTrigger className="w-max border-blue-500/30 flex gap-4">
+        <SelectTrigger className="w-max border-blue-500/30 flex gap-4 dark:text-white text-black">
           {course?.name}
         </SelectTrigger>
-        <SelectContent className="bg-blue-800 text-white">
+        <SelectContent className="dark:bg-blue-800 dark:text-white text-black">
           {courses?.map((course) => (
             <SelectItem key={course._id} value={course._id}>
               {course.name}

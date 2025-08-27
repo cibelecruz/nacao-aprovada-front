@@ -13,7 +13,7 @@ export function SelectedDateHeader({ selectedDate }: SelectedDateProps) {
   return (
     <div className="flex justify-between w-full px-1">
       <div>
-        <p className="font-bold">
+        <p className="font-bold dark:text-white text-black">
           {formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1)}
         </p>
         <p className="text-zinc-400 text-sm">Lista de tarefas:</p>
@@ -24,7 +24,7 @@ export function SelectedDateHeader({ selectedDate }: SelectedDateProps) {
         className="text-white border md:px-4 text-sm gap-2 sm:px-4  border-yellow-600 rounded-full max-sm:h-10 max-sm:w-10 flex items-center justify-center hover:border-yellow-500 transition-all"
       >
         <Plus className="text-yellow-600" />
-        <span className="max-sm:hidden">Adicionar Atividade</span>
+        <span className="max-sm:hidden dark:text-white text-black">Adicionar Atividade</span>
       </button>
     </div>
   )

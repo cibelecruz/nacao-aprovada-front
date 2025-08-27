@@ -42,11 +42,11 @@ export function DialogAddSubject({ subjects, idCourse }: DialogAddSubject) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <ConfirmButton className="w-auto mt-4 mr-3">
+        <ConfirmButton className="w-auto mt-4 mr-3 dark:text-white">
           Adicionar Disciplina
         </ConfirmButton>
       </DialogTrigger>
-      <DialogContent className="bg-[#050c16] border-none rounded-3xl w-max lg:w-1/4">
+      <DialogContent className="bg-white text-black dark:text-white dark:bg-[#050c16] border-none rounded-3xl w-max lg:w-1/4">
         <DialogHeader>
           <DialogTitle>Dicionar Disciplina</DialogTitle>
           <div className="pt-9">
@@ -78,7 +78,7 @@ export function DialogAddSubject({ subjects, idCourse }: DialogAddSubject) {
           </DialogClose>
           <DialogClose asChild>
             <ConfirmButton
-              className="mt-4 w-32 lg:w-20 xl:w-32"
+              className="mt-4 w-32 lg:w-20 xl:w-32 text-white"
               onClick={() => addSubject()}
             >
               Confirmar

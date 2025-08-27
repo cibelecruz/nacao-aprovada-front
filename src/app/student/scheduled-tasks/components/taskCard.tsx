@@ -92,7 +92,7 @@ export function TaskCard({ task }: TaskCardProps) {
   }
 
   return (
-    <div className="rounded-2xl p-3 space-y-4 bg-[#070E17]">
+    <div className="rounded-2xl p-3 space-y-4 bg-[#F9E5BC] text-black dark:text-white dark:bg-[#070E17]">
       <div className="flex justify-between items-center">
         <div className="flex gap-4 items-center">
           <h2 className="font-bold">{task.taskType}</h2>
@@ -163,7 +163,7 @@ export function TaskCard({ task }: TaskCardProps) {
               course={task.subtitle}
               topic={task.title}
               triggerButton={
-                <button className="w-full flex justify-between border border-blue-300/20 p-4 rounded-2xl">
+                <button className="w-full flex justify-between border border-black dark:border-blue-300/20 p-4 rounded-2xl">
                   <div className="flex text-sm items-center gap-4">
                     <NotebookPen className="text-yellow-700" />
                     {percentageOfHits ? (

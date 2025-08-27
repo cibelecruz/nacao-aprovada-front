@@ -2,7 +2,7 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['storage.googleapis.com'], // Adicione o domínio aqui
+    domains: ['storage.googleapis.com'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // A FUNÇÃO async rewrites() FOI REMOVIDA DAQUI
 }
 
 export default nextConfig

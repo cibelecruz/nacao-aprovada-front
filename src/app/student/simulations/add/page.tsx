@@ -26,7 +26,7 @@ const subjectSchema = z
     {
       message:
         'O número de acertos não pode ser maior que o total de questões.',
-      path: ['correctAnswers'], // Aponta o erro para o campo correto
+      path: ['correctAnswers'],
     },
   )
 
@@ -102,7 +102,13 @@ export default function CreateExam() {
 
   return (
     <div className="md:flex md:justify-center sm:p-auto min-h-max p-4 pb-36 overflow-y-scroll scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent active:scrollbar-thumb-yellow-600">
-      <div className="max-sm:w-full md:w-1/2 lg:w-3/5 mt-7 lg:mt-0 p-4 rounded-lg space-y-10 bg-blue-900">
+      <div
+        className="
+            max-sm:w-full md:w-1/2 lg:w-3/5 mt-7 lg:mt-0 p-4 rounded-lg space-y-10
+          bg-[#f6e6c1] text-black border border-blue-300
+          dark:bg-[#070E17] dark:text-white dark:border-blue-900/40
+        "
+      >
         <div className="space-y-2">
           <button title="voltar" onClick={() => window.history.back()}>
             <ArrowLeft className="size-5 text-yellow-600" />
@@ -114,39 +120,56 @@ export default function CreateExam() {
           onSubmit={handleSubmit(onSubmit)}
           className="max-w-4xl space-y-6 text-base"
         >
+          {/* Nome */}
           <div className="space-y-2">
-            <label htmlFor="name">Nome do Simulado</label>
+            <label htmlFor="name" className="text-gray-800 dark:text-gray-300">
+              Nome do Simulado
+            </label>
             <input
               type="text"
               placeholder="Enem"
               id="name"
               {...register('name')}
-              className="bg-transparent w-full border border-zinc-400 rounded-md p-2"
+              className="
+                w-full px-4 py-2 rounded-lg
+                bg-white text-gray-900 border border-gray-300 placeholder:text-gray-600
+                focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent
+                dark:bg-zinc-900 dark:text-white dark:border-zinc-700 dark:placeholder:text-gray-400
+              "
             />
             {errors.name && (
               <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
             )}
           </div>
 
+          {/* Data */}
           <div className="space-y-2">
-            <label htmlFor="date">Data do Simulado</label>
+            <label htmlFor="date" className="text-gray-800 dark:text-gray-300">
+              Data do Simulado
+            </label>
             <input
               type="date"
               id="date"
               {...register('date')}
-              className="bg-transparent w-full border border-zinc-400 rounded-md p-2"
+              className="
+                w-full px-4 py-2 rounded-lg
+                bg-white text-gray-900 border border-gray-300 placeholder:text-gray-600
+                focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent
+                dark:bg-zinc-900 dark:text-white dark:border-zinc-700 dark:placeholder:text-gray-400
+              "
             />
             {errors.date && (
               <p className="text-red-500 text-sm mt-1">{errors.date.message}</p>
             )}
           </div>
 
+          {/* Matérias */}
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <label>Matérias</label>
+              <label className="text-gray-800 dark:text-gray-300">Matérias</label>
               <ConfirmButton
                 onClick={addSubject}
-                className="flex items-center text-black"
+                className="flex items-center text-black dark:text-black"
               >
                 <Plus className="w-4 h-4 mr-1" />
                 Adicionar Matéria
@@ -160,12 +183,21 @@ export default function CreateExam() {
             {fields.map((field, index) => (
               <div
                 key={field.id}
-                className="grid grid-cols-1 md:grid-cols-[2fr,1fr,1fr,auto] gap-4 p-4 rounded-lg border border-zinc-400 items-center"
+                className="
+                  grid grid-cols-1 md:grid-cols-[2fr,1fr,1fr,auto] gap-4 p-4 rounded-lg
+                  border border-gray-300 dark:border-zinc-700
+                "
               >
+                {/* Select matéria */}
                 <div>
                   <select
                     {...register(`subjects.${index}.name`)}
-                    className="w-full px-4 py-2 rounded-lg bg-blue-800 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent text-white"
+                    className="
+                      w-full px-4 py-2 rounded-lg
+                      bg-white text-gray-900 border border-gray-300
+                      focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent
+                      dark:bg-blue-800 dark:text-white dark:border-blue-600
+                    "
                   >
                     <option value="">Selecione uma matéria</option>
                     {subjectList.map((subject) => (
@@ -183,13 +215,21 @@ export default function CreateExam() {
                     </p>
                   )}
                 </div>
+
+                {/* Total de questões */}
                 <div>
                   <input
                     type="number"
                     placeholder="Total de questões"
                     {...register(`subjects.${index}.totalQuestions`)}
                     min="0"
-                    className="w-full px-4 py-2 rounded-lg bg-blue-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent text-white md:placeholder:text-xs md:px-2"
+                    className="
+                      w-full px-4 py-2 rounded-lg
+                      bg-white text-gray-900 border border-gray-300 placeholder:text-gray-600
+                      focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent
+                      dark:bg-blue-800 dark:text-white dark:border-blue-600 dark:placeholder:text-gray-400
+                      md:placeholder:text-xs md:px-2
+                    "
                   />
                   {errors.subjects?.[index]?.totalQuestions && (
                     <p className="text-red-500 text-sm mt-1">
@@ -197,13 +237,21 @@ export default function CreateExam() {
                     </p>
                   )}
                 </div>
+
+                {/* Questões corretas */}
                 <div>
                   <input
                     type="number"
                     placeholder="Questões corretas"
                     {...register(`subjects.${index}.correctQuestions`)}
                     min="0"
-                    className="w-full px-4 py-2 rounded-lg bg-blue-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent text-white md:placeholder:text-xs md:px-2"
+                    className="
+                      w-full px-4 py-2 rounded-lg
+                      bg-white text-gray-900 border border-gray-300 placeholder:text-gray-600
+                      focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent
+                      dark:bg-blue-800 dark:text-white dark:border-blue-600 dark:placeholder:text-gray-400
+                      md:placeholder:text-xs md:px-2
+                    "
                   />
                   {errors.subjects?.[index]?.correctQuestions && (
                     <p className="text-red-500 text-sm mt-1">
@@ -211,10 +259,16 @@ export default function CreateExam() {
                     </p>
                   )}
                 </div>
+
+                {/* Remover */}
                 <button
                   type="button"
                   onClick={() => removeSubject(index)}
-                  className="inline-flex items-center justify-center w-8 h-8 rounded-md bg-red-500/10 text-red-500 hover:bg-red-500/20 transition-colors max-md:w-full"
+                  className="
+                    inline-flex items-center justify-center w-8 h-8 rounded-md
+                    bg-red-500/10 text-red-600 hover:bg-red-500/20 transition-colors
+                    max-md:w-full
+                  "
                   disabled={fields.length === 1}
                 >
                   <Minus className="w-4 h-4 max-md:hidden" />

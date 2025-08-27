@@ -85,7 +85,7 @@ export function AddCourse({
       <DialogTrigger className="border border-yellow-600 w-max h-8 px-3 text-base rounded hover:border-yellow-500 transition-all">
         Adicionar plano de estudos
       </DialogTrigger>
-      <DialogContent className="bg-blue-900 border-none rounded-3xl w-max lg:w-1/4 space-y-3">
+      <DialogContent className="bg-white dark:bg-blue-900 text-black dark:text-white border-none rounded-3xl w-max lg:w-1/4 space-y-3">
         <DialogHeader>
           <DialogTitle>Adicionar Plano</DialogTitle>
           <DialogDescription hidden>
@@ -132,17 +132,17 @@ export function AddCourse({
         </DialogHeader>
         <DialogFooter className="max-sm:items-center">
           <DialogClose asChild>
+            <CancelButton className="w-32 lg:w-20 xl:w-32 mt-4">
+              Cancelar
+            </CancelButton>
+          </DialogClose>
+          <DialogClose asChild>
             <ConfirmButton
-              className="w-32 lg:w-20 xl:w-32 mt-4 "
+              className="w-32 lg:w-20 xl:w-32 mt-4 text-white"
               onClick={() => confirmAdd()}
             >
               Confirmar
             </ConfirmButton>
-          </DialogClose>
-          <DialogClose asChild>
-            <CancelButton className="w-32 lg:w-20 xl:w-32 mt-4">
-              Cancelar
-            </CancelButton>
           </DialogClose>
         </DialogFooter>
       </DialogContent>

@@ -105,19 +105,19 @@ export default function ScheduledTasks() {
   return (
     <div className="md:flex md:justify-center sm:p-auto min-h-max p-4 pb-36 overflow-y-scroll scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent active:scrollbar-thumb-yellow-600">
       <div className="max-sm:w-full md:w-1/2 lg:w-3/5 mt-5">
-        <TitlePage title="Cronograma" className="text-yellow-600" />
-        <div className="w-full p-2 mt-8 rounded-lg flex flex-col items-center bg-[#070E17]">
+        <TitlePage title="Cronograma" className="dark:text-yellow-600 text-black" />
+        <div className="w-full p-2 mt-8 rounded-lg flex flex-col items-center dark:bg-[#070E17] bg-[#f9e5bc]">
           <div className="flex items-end gap-2 justify-center">
             <button onClick={goToPreviousWeek}>
-              <ChevronLeft className="text-yellow-600 size-6" />
+              <ChevronLeft className="dark:text-yellow-600 text-black size-6" />
             </button>
-            <p className="font-bold">
+            <p className="font-bold dark:text-white text-black">
               {`Semana ${
                 selectedDate.diff(dayjs(preferedStartDate), 'week') + 1
               }`}
             </p>
             <button onClick={goToNextWeek}>
-              <ChevronRight className="text-yellow-600 size-6" />
+              <ChevronRight className="dark:text-yellow-600 text-black size-6" />
             </button>
           </div>
 

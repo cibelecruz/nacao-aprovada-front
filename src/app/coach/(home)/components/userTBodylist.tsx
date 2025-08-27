@@ -53,7 +53,7 @@ export function UserTBodyList({
   return (
     <tr
       onClick={() => router.push(`/coach/student-profile/${user.id}`)}
-      className="hover:bg-slate-700 text-base border-y border-y-blue-400/60 cursor-pointer"
+      className="hover:bg-zinc-300 hover:dark:bg-slate-700 text-base text-black dark:text-white border-y border-y-blue-400/60 cursor-pointer"
     >
       <td className="w-[2%] px-1" onClick={(e) => e.stopPropagation()}>
         <Checkbox
@@ -139,7 +139,7 @@ export function UserTBodyList({
           />
         </button>
         <button
-          className="text-2xl flex items-center justify-center text-blue-600"
+          className="text-2xl flex items-center justify-center text-black dark:text-blue-600"
           onClick={(e) => {
             e.stopPropagation()
             handleEmailClick(user.email)
