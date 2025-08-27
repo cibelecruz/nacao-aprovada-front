@@ -70,29 +70,40 @@ export default function SimulationsPage() {
           <TitlePage title="Simulados" className="text-yellow-600 text-3xl" />
           <ConfirmButton
             onClick={() => router.push('/student/simulations/add')}
-            className="text-black flex items-center gap-2"
+            className="text-black dark:text-white flex items-center gap-2"
           >
             <Plus className="size-5" />
             <span className="max-md:hidden">Adicionar simulado</span>
           </ConfirmButton>
         </div>
 
-        <div className="bg-[#070E17] p-5 rounded-lg">
+        {/* Card de filtros + lista */}
+        <div className="rounded-lg p-5 
+                        bg-[#f6e6c1] border border-blue-300
+                        dark:bg-[#070E17] dark:border-blue-900/40">
+          {/* Filtros */}
           <div className="grid md:grid-cols-[1fr,auto,auto] gap-4 mb-8 py-4 max-md:space-y-4">
+            {/* Busca */}
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 size-5" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 size-5" />
               <input
                 type="text"
                 placeholder="Buscar simulado..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 rounded-lg bg-blue-800 border border-blue-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                className="
+                  w-full pl-10 pr-4 py-2 rounded-lg
+                  bg-white text-gray-900 border border-gray-300 placeholder:text-gray-500
+                  focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent
+                  dark:bg-blue-800 dark:text-white dark:border-blue-600 dark:placeholder:text-gray-400
+                "
               />
             </div>
 
+            {/* Data inicial */}
             <div className="flex items-center gap-2">
               <div className="relative flex-1">
-                <div className="absolute -top-5 left-0 text-sm text-gray-400">
+                <div className="absolute -top-5 left-0 text-sm text-gray-700 dark:text-gray-400">
                   De:
                 </div>
                 <input
@@ -100,13 +111,19 @@ export default function SimulationsPage() {
                   placeholder="Data inicial"
                   value={startDate}
                   onChange={(e) => setStartDate(e.target.value)}
-                  className="w-full px-4 py-2 rounded-lg bg-blue-800 border border-blue-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                  className="
+                    w-full px-4 py-2 rounded-lg
+                    bg-white text-gray-900 border border-gray-300 placeholder:text-gray-500
+                    focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent
+                    dark:bg-blue-800 dark:text-white dark:border-blue-600 dark:placeholder:text-gray-400
+                  "
                 />
               </div>
             </div>
 
+            {/* Data final */}
             <div className="relative">
-              <div className="absolute -top-5 left-0 text-sm text-gray-400">
+              <div className="absolute -top-5 left-0 text-sm text-gray-700 dark:text-gray-400">
                 Até:
               </div>
               <input
@@ -115,22 +132,29 @@ export default function SimulationsPage() {
                 value={endDate}
                 onChange={(e) => {
                   const value = e.target.value
-
                   if (startDate && new Date(value) < new Date(startDate)) {
                     toast.error('Data final não pode ser antes da data inicial')
                   } else {
                     setEndDate(value)
                   }
                 }}
-                className="w-full px-4 py-2 rounded-lg bg-blue-800 border border-blue-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                className="
+                  w-full px-4 py-2 rounded-lg
+                  bg-white text-gray-900 border border-gray-300 placeholder:text-gray-500
+                  focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent
+                  dark:bg-blue-800 dark:text-white dark:border-blue-600 dark:placeholder:text-gray-400
+                "
               />
             </div>
           </div>
 
-          <div className="lg:bg-blue-800 lg:p-4 lg:rounded-xl">
+          {/* Lista / Tabela */}
+          <div className="lg:rounded-xl lg:p-4 
+                          lg:bg-[#f6e6c1] lg:border lg:border-blue-300
+                          dark:lg:bg-blue-800 dark:lg:border-blue-700">
             {filteredData.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-12 px-4">
-                <p className="text-gray-400 text-lg">
+                <p className="text-gray-800 dark:text-gray-300 text-lg">
                   Nenhum simulado encontrado para os filtros aplicados.
                 </p>
               </div>

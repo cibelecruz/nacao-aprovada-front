@@ -49,14 +49,16 @@ export function InputInfo({
 
   return (
     <div className="flex flex-col w-full gap-1">
-      <label htmlFor={label}>{label}</label>
+      <label htmlFor={label} className="text-black dark:text-white">
+        {label}
+      </label>
       <div className="flex">
         <input
           onChange={handleInputChange}
           type={type === 'date' || type === 'cpf' ? 'text' : 'text'}
           value={value}
           placeholder={placeholder}
-          className=" flex-grow px-3 py-2 bg-transparent border border-gray-800 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+          className=" flex-grow px-3 py-2 bg-transparent border border-gray-800 rounded-md text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
           style={{ WebkitAppearance: 'none', MozAppearance: 'textfield' }}
           id={label}
         />

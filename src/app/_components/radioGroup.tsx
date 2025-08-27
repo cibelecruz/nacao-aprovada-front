@@ -35,7 +35,7 @@ export function Radio({ items, value, onChange }: RadioProps) {
         <label
           key={item.value}
           htmlFor={item.value}
-          className="flex items-center rounded-lg space-x-4 p-3 bg-blue-800 border border-transparent hover:border-yellow-400 hover:cursor-pointer transition-all"
+          className="flex items-center rounded-lg space-x-4 p-3 dark:text-white text-black bg-white dark:bg-blue-800 border border-transparent hover:border-yellow-400 hover:cursor-pointer transition-all"
         >
           <RadioGroupItem
             value={item.value}

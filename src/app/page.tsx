@@ -61,7 +61,7 @@ export default function Home() {
   }
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
+    <div className="w-screen h-screen flex justify-center items-center bg-white dark:bg-blue-900">
       <div className="flex flex-col justify-center items-center gap-16 max-w-sm">
         <div>
           <Image
@@ -101,7 +101,14 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="w-full text-right">
+          <div className="w-full flex flex-col gap-4 text-right">
+            <button
+              type="button"
+              onClick={() => setRecoverPassword(true)}
+              className="text-blue-400 font-semibold text-sm hover:underline"
+            >
+              Primeiro acesso?
+            </button>
             <button
               type="button"
               onClick={() => setRecoverPassword(true)}

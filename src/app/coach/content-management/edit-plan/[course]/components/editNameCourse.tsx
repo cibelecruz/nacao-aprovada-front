@@ -26,7 +26,7 @@ export function EditNameCourse({
   return isEditing ? (
     <div className="flex gap-3">
       <input
-        className={`bg-transparent block border pl-2 border-yellow-500 rounded ${className}`}
+        className={`bg-transparent text-black dark:text-white block border pl-2 border-yellow-500 rounded ${className}`}
         type="text"
         value={institution}
         onChange={(e) => {
@@ -35,7 +35,7 @@ export function EditNameCourse({
       ></input>
       -
       <input
-        className={`bg-transparent block border pl-2 border-yellow-500 rounded ${className}`}
+        className={`bg-transparent text-black dark:text-white block border pl-2 border-yellow-500 rounded ${className}`}
         type="text"
         value={jobPosition}
         onChange={(e) => {

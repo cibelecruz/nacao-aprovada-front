@@ -51,7 +51,7 @@ export function DialogImportSubject({
           Importar Disciplinas
         </CancelButton>
       </DialogTrigger>
-      <DialogContent className="bg-[#050c16] border-none rounded-3xl w-max lg:w-1/4">
+      <DialogContent className="bg-white dark:bg-[#050c16] text-black dark:text-white border-none rounded-3xl w-max lg:w-1/4">
         <DialogHeader>
           <DialogTitle>Importar Disciplinas</DialogTitle>
           <div className="pt-9">
@@ -83,7 +83,7 @@ export function DialogImportSubject({
           </DialogClose>
           <DialogClose asChild>
             <ConfirmButton
-              className="w-32 lg:w-20 xl:w-32 mt-4"
+              className="w-32 lg:w-20 xl:w-32 mt-4 text-white"
               onClick={() => importSubjects()}
             >
               Confirmar

@@ -53,7 +53,7 @@ export function SliderEditSubject({
   return (
     <Accordion type="single" collapsible>
       <AccordionItem
-        className="w-full border-none bg-blue-800/60 hover:bg-blue-800/90 rounded-2xl mt-8 px-3"
+        className="w-full border border-black dark:border-none bg-[#F2E2C1] dark:bg-blue-800/60 dark:hover:bg-blue-800/90 rounded-2xl mt-8 px-3"
         value="item-1"
       >
         <div className="relative flex items-center gap-2 p-2 mt-2">
@@ -65,12 +65,12 @@ export function SliderEditSubject({
               className="bg-gray-700 size-6 mt-1 border-gray-400 data-[state=checked]:bg-yellow-600 data-[state=checked]:border-yellow-600"
             />
           </div>
-          <DropDownRelevance
-            relevance={relevanceSubject}
-            setRelevance={setRelevanceSubject}
-          />
-          <AccordionTrigger className="text-lg absolute inset-0 flex items-center">
-            <p className="pl-24">{subject.name}</p>
+            <DropDownRelevance
+              relevance={relevanceSubject}
+              setRelevance={setRelevanceSubject}
+            />
+          <AccordionTrigger onClick={(e) => e.stopPropagation()}  className="text-lg absolute inset-0 flex items-center">
+            <p className="pl-24 text-black dark:text-white">{subject.name}</p>
           </AccordionTrigger>
         </div>
 

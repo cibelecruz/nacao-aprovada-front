@@ -79,7 +79,7 @@ export function DialogCreateSubjectCourse({
           Criar {isSubject ? 'Disciplina' : 'Plano'}
         </ConfirmButton>
       </DialogTrigger>
-      <DialogContent className="bg-[#050c16] border-none rounded-3xl w-max lg:w-1/4">
+      <DialogContent className="bg-white dark:bg-[#050c16] text-black dark:text-white border-none rounded-3xl w-max lg:w-1/4">
         <DialogHeader>
           <DialogTitle>Criar {isSubject ? 'Disciplina' : 'Plano'}</DialogTitle>
         </DialogHeader>
@@ -119,7 +119,7 @@ export function DialogCreateSubjectCourse({
           </DialogClose>
           <DialogClose asChild>
             <ConfirmButton
-              className="mt-4 w-32"
+              className="mt-4 w-32 text-white"
               onClick={() => (isSubject ? addSubject() : addCourse())}
             >
               Criar

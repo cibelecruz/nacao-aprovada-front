@@ -164,11 +164,16 @@ export default function PerformanceScreenPage() {
       <div className="mt-5 max-sm:w-full max-md:w-full w-3/5 space-y-8">
         <TitlePage className="text-yellow-600" title="Desempenho" />
 
-        <div className="border-3 rounded-xl border-[#070E17] p-5 bg-[#070E17] space-y-8">
+        {/* Container principal */}
+        <div className="rounded-xl p-5 space-y-8
+                        bg-[#f6e6c1] border border-blue-300 text-black
+                        dark:bg-[#070E17] dark:border-blue-900/40 dark:text-white">
+          {/* Cabeçalho */}
           <div className="flex justify-between items-center">
             <h1 className="ml-2 text-xl">{currentUser?.displayName}</h1>
           </div>
 
+          {/* Cards de performance */}
           <div className="w-full max-md:grid grid-cols-2 gap-4 md:flex md:flex-wrap md:justify-between">
             <CardPerformance
               title="Concurseiro nível"
@@ -194,12 +199,13 @@ export default function PerformanceScreenPage() {
             {/* O backend não retorna essa informação */}
             <CardPerformance
               title="Comprometimento"
-              label={'-'}
+              label="-"
               icon={silverStar}
               key="Comprometimento"
             />
           </div>
 
+          {/* Metas */}
           <div className="w-full flex max-sm:flex-col gap-4">
             <Goal
               title="Edital"
@@ -219,8 +225,10 @@ export default function PerformanceScreenPage() {
             />
           </div>
 
-          <div className="space-y-10 p-4 flex-1 rounded-xl border border-blue-400/50">
-            <p className="font-bold text-lg">Estatística</p>
+          {/* Estatística */}
+          <div className="space-y-10 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50">
+            <p className="font-bold text-lg text-black dark:text-white">Estatística</p>
 
             <div className="max-sm:grid max-sm:grid-cols-2 md:flex gap-4">
               <SimpleCard label="Assuntos revisados" value={0} />
@@ -240,8 +248,10 @@ export default function PerformanceScreenPage() {
             </div>
           </div>
 
-          <div className="space-y-5 p-4 flex-1 rounded-xl border border-blue-400/50">
-            <p className="font-bold text-lg">Índice de acertos</p>
+          {/* Índice de acertos */}
+          <div className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50">
+            <p className="font-bold text-lg text-black dark:text-white">Índice de acertos</p>
 
             <ProgressContainer
               indicatorColor="bg-yellow-600"
@@ -256,12 +266,12 @@ export default function PerformanceScreenPage() {
             <div className="flex gap-4">
               <div className="flex gap-2 items-center">
                 <div className="h-4 w-4 rounded bg-yellow-600" />
-                <p className="text-xs">Meu desempenho</p>
+                <p className="text-xs text-gray-800 dark:text-gray-300">Meu desempenho</p>
               </div>
 
               <div className="flex gap-2 items-center">
                 <div className="h-4 w-4 rounded bg-blue-600" />
-                <p className="text-xs">Concorrentes</p>
+                <p className="text-xs text-gray-800 dark:text-gray-300">Concorrentes</p>
               </div>
             </div>
 
@@ -278,24 +288,30 @@ export default function PerformanceScreenPage() {
             </div>
           </div>
 
-          <div className="space-y-5 p-4 flex-1 rounded-xl border border-blue-400/50">
+          {/* Frequência */}
+          <div className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50">
             <div className="w-full flex justify-between items-center">
-              <p className="font-bold text-lg">Frequência</p>
-              <p className="text-xs">Média diária: {averageTimePerDay}</p>
+              <p className="font-bold text-lg text-black dark:text-white">Frequência</p>
+              <p className="text-xs text-gray-800 dark:text-gray-300">
+                Média diária: {averageTimePerDay}
+              </p>
             </div>
-            <p className="text-gray-300 max-md:text-xs">
+            <p className="text-gray-800 dark:text-gray-300 max-md:text-xs">
               Seu tempo de estudo semanal está muito baixo.
             </p>
 
-            <div className="text-white w-full">
+            <div className="w-full text-black dark:text-white">
               <Chart
                 studyAvailability={performanceStaticts.studyAvailability}
               />
             </div>
           </div>
 
-          <div className="space-y-5 p-4 flex-1 rounded-xl border border-blue-400/50">
-            <p className="font-bold text-lg">Histórico das tarefas</p>
+          {/* Histórico tarefas */}
+          <div className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50">
+            <p className="font-bold text-lg text-black dark:text-white">Histórico das tarefas</p>
             <div className="w-full flex lg:justify-end"></div>
 
             <LineChart
@@ -305,8 +321,10 @@ export default function PerformanceScreenPage() {
             />
           </div>
 
-          <div className="space-y-5 p-4 flex-1 rounded-xl border border-blue-400/50">
-            <p className="font-bold text-lg">Histórico dos simulados</p>
+          {/* Histórico simulados */}
+          <div className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50">
+            <p className="font-bold text-lg text-black dark:text-white">Histórico dos simulados</p>
             <div className="w-full flex lg:justify-end"></div>
 
             <SimulationLineChart
@@ -316,9 +334,11 @@ export default function PerformanceScreenPage() {
             />
           </div>
 
-          <div className="space-y-5 p-4 flex-1 rounded-xl border border-blue-400/50">
-            <p className="font-bold text-lg">{courseName}</p>
-            <p className="font-normal text-base">
+          {/* Pie chart */}
+          <div className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50">
+            <p className="font-bold text-lg text-black dark:text-white">{courseName}</p>
+            <p className="font-normal text-base text-gray-800 dark:text-gray-300">
               Questões feitas por disciplina
             </p>
             <PieChartComponent
@@ -327,9 +347,11 @@ export default function PerformanceScreenPage() {
             />
           </div>
 
-          <div className="space-y-5 p-4 flex-1 rounded-xl border border-blue-400/50">
-            <p className="font-bold text-lg">{courseName}</p>
-            <p className="font-normal text-base">
+          {/* Tabela por disciplina */}
+          <div className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50">
+            <p className="font-bold text-lg text-black dark:text-white">{courseName}</p>
+            <p className="font-normal text-base text-gray-800 dark:text-gray-300">
               Questões feitas por disciplina
             </p>
 

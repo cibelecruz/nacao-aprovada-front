@@ -31,7 +31,7 @@ export default function DialogInfoRelevance({
           <p>{String(relevance)}</p>
         </span>
       </DialogTrigger>
-      <DialogContent className="bg-[#050c16] w-full border-none rounded-3xl lg:w-1/2">
+      <DialogContent className="bg-white dark:bg-[#050c16] text-black dark:text-white w-full border-none rounded-3xl lg:w-1/2">
         <DialogHeader>
           <DialogTitle className="text-bold text-yellow-600 text-left">
             Indicador de Relevância
@@ -148,7 +148,7 @@ export default function DialogInfoRelevance({
 
         <DialogFooter className="ml-auto">
           <DialogClose asChild>
-            <button className="text-sm font-bold text-blue-300">Fechar</button>
+            <button className="text-sm font-bold text-black dark:text-blue-300">Fechar</button>
           </DialogClose>
         </DialogFooter>
       </DialogContent>

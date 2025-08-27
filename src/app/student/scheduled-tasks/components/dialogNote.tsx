@@ -57,7 +57,7 @@ export function DialogNote({
   return (
     <Dialog>
       <DialogTrigger asChild>{triggerButton}</DialogTrigger>
-      <DialogContent className="bg-[#050c16] border-none rounded-3xl md:w-2/5 max-md:w-4/5">
+      <DialogContent className="bg-white dark:bg-[#050c16] text-black dark:text-white border-none rounded-3xl md:w-2/5 max-md:w-4/5">
         <DialogHeader className="text-left">
           <div className="flex items-center justify-between">
             <DialogTitle className="text-yellow-600">Anotações</DialogTitle>

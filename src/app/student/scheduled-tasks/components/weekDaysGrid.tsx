@@ -38,10 +38,10 @@ export function WeekDaysGrid({ selectedDate, onDateClick }: WeekDaysGridProps) {
         const isSelected = day.isSame(selectedDate, 'day')
 
         const backgroundClass = isToday
-          ? 'bg-yellow-600 text-black hover:bg-yellow-500'
+          ? 'dark:bg-yellow-600 bg-yellow-400 dark:text-white text-black hover:bg-yellow-500' 
           : isSelected
-            ? 'bg-blue-700 hover:bg-white/10'
-            : 'bg-blue-900 text-white hover:bg-white/10'
+            ? 'dark:bg-blue-700 bg-[#f3e3c2] dark:text-white text-black hover:bg-white/10'
+            : 'dark:bg-blue-900 bg-white dark:text-white text-black hover:bg-white/10'
 
         return (
           <button

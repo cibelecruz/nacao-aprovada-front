@@ -82,12 +82,12 @@ export function Onboarding() {
   return (
     <div className="md:flex md:justify-center sm:p-auto min-h-max p-4 pb-36">
       <div className="mt-10 max-sm:w-full md:w-1/2 md:space-y-8 max-sm:space-y-4">
-        <h1>
+        <h1 className='text-black dark:text-white'>
           Bem-vindo(a), <br />
           <strong>{currentUser?.displayName}</strong>
         </h1>
 
-        <p className="text-xs">
+        <p className="text-xs text-black dark:text-white">
           Vou te ajudar a organizar os seus estudos, mas para isso vou precisar
           conhecer um pouquinho mais sobre você!
         </p>
@@ -96,13 +96,13 @@ export function Onboarding() {
           onSubmit={handleSubmit(handleSubmitForm)}
           className="w-full space-y-4"
         >
-          <fieldset className="border p-1 border-zinc-400 rounded w-full">
-            <legend className="text-sm text-zinc-300 font-bold">Nome</legend>
+          <fieldset className="border p-1 border-black dark:border-zinc-400 rounded w-full">
+            <legend className="text-sm text-black dark:text-zinc-300 font-bold">Nome</legend>
             <input
               type="text"
               {...register('name')}
               defaultValue={currentUser?.displayName ?? ''}
-              className="bg-transparent w-full p-1 outline-none text-zinc-300 placeholder:text-zinc-300"
+              className="bg-transparent w-full p-1 outline-none text-black dark:text-zinc-300 placeholder:text-black dark:placeholder:text-zinc-300"
               placeholder="Nome"
             />
           </fieldset>
@@ -110,13 +110,13 @@ export function Onboarding() {
             <p className="text-xs text-red-500">{errors.name.message}</p>
           )}
 
-          <fieldset className="border p-1 border-zinc-400 rounded w-full">
-            <legend className="text-sm font-bold text-zinc-300">Idade</legend>
+          <fieldset className="border p-1 border-black dark:border-zinc-400 rounded w-full">
+            <legend className="text-sm font-bold text-black dark:text-zinc-300">Idade</legend>
             <input
               type="number"
               required
               {...register('age')}
-              className="bg-transparent w-full p-1 outline-none text-zinc-300 placeholder:text-zinc-300"
+              className="bg-transparent w-full p-1 outline-none text-black dark:text-zinc-300 placeholder:text-black dark:placeholder:text-zinc-300"
               placeholder="Idade"
             />
           </fieldset>
@@ -124,14 +124,14 @@ export function Onboarding() {
             <p className="text-xs text-red-500">{errors.age.message}</p>
           )}
 
-          <fieldset className="border p-1 border-zinc-400 rounded w-full">
-            <legend className="text-sm font-bold text-zinc-300">
+          <fieldset className="border p-1 border-black dark:border-zinc-400 rounded w-full">
+            <legend className="text-sm font-bold text-black dark:text-zinc-300">
               Telefone
             </legend>
             <input
               type="tel"
               {...register('phone')}
-              className="bg-transparent w-full p-1 outline-none text-zinc-300 placeholder:text-zinc-300"
+              className="bg-transparent w-full p-1 outline-none text-black dark:text-zinc-300 placeholder:text-black dark:placeholder:text-zinc-300"
               placeholder="Telefone"
             />
           </fieldset>
@@ -140,7 +140,7 @@ export function Onboarding() {
           )}
 
           <div>
-            <p className="font-bold text-lg">Você está empregado atualmente?</p>
+            <p className="font-bold text-lg text-black dark:text-white">Você está empregado atualmente?</p>
             <div className="mt-2">
               <label className="inline-flex items-center mr-4">
                 <input
@@ -150,7 +150,7 @@ export function Onboarding() {
                   onChange={handleRadioChange}
                   className="form-radio text-blue-500"
                 />
-                <span className="ml-2">Sim</span>
+                <span className="ml-2 text-black dark:text-white">Sim</span>
               </label>
               <label className="inline-flex items-center">
                 <input
@@ -160,17 +160,17 @@ export function Onboarding() {
                   onChange={handleRadioChange}
                   className="form-radio text-blue-500"
                 />
-                <span className="ml-2">Não</span>
+                <span className="ml-2 text-black dark:text-white">Não</span>
               </label>
             </div>
           </div>
 
           {showInputJobPosition ? (
-            <fieldset className="border p-1 border-zinc-400 rounded w-full">
+            <fieldset className="border p-1 border-black dark:border-zinc-400 rounded w-full">
               <input
                 {...register('jobPosition')}
                 type="text"
-                className="bg-transparent w-full p-1 outline-none text-zinc-300 placeholder:text-zinc-400"
+                className="bg-transparent w-full p-1 outline-none text-black dark:text-zinc-300 placeholder:text-black dark:placeholder:text-zinc-400"
                 placeholder="Qual sua profissão?"
               />
 
@@ -182,7 +182,7 @@ export function Onboarding() {
             </fieldset>
           ) : null}
 
-          <ButtonFill label="Próximo" type="submit" disabled={false} />
+          <ButtonFill className='md:w-full' label="Próximo" type="submit" disabled={false} />
         </form>
       </div>
     </div>
