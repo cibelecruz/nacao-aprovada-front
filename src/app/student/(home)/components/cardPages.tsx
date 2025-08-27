@@ -18,7 +18,7 @@ export function CardPage({ image, label, link }: CardPageProps) {
   return (
     <button
       onClick={handleRedirectUser}
-      className="w-[150px] flex flex-col justify-center items-center gap-1 py-2 px-5 border border-transparent bg-blue-800 rounded-2xl hover:bg-blue-600 hover:border-yellow-600 transition-all "
+      className="w-[150px] flex flex-col justify-center items-center gap-1 py-2 px-5 border border-transparent bg-white dark:bg-blue-800 rounded-2xl dark:hover:bg-blue-600 hover:border-yellow-600 transition-all "
     >
       <Image
         priority
@@ -29,7 +29,7 @@ export function CardPage({ image, label, link }: CardPageProps) {
         className="w-20 h-20"
       />
 
-      <p>{label}</p>
+      <p className="text-black dark:text-zinc-300">{label}</p>
     </button>
   )
 }

@@ -49,7 +49,11 @@ export default function SubjectsList() {
         <Accordion
           onChange={(e) => e.stopPropagation()}
           type="multiple"
-          className="border-8 border-[#070E17] rounded-xl bg-[#070E17] space-y-4 "
+          className="
+            rounded-xl space-y-4 border
+            bg-[#f6e6c1] border-blue-300 text-black
+            dark:bg-[#070E17] dark:border-blue-900/40 dark:text-white
+          "
         >
           {course?.subjects
             .filter((subject) => subject.active === true)
@@ -57,19 +61,23 @@ export default function SubjectsList() {
               <AccordionItem
                 key={subject.id}
                 value={subject.id}
-                className="space-y-4 border-zinc-700"
+                className="space-y-4 border-b border-gray-300 dark:border-zinc-700"
               >
                 <AccordionTrigger
                   key={subject.id}
-                  className="flex justify-between w-full data-[state=open]:bg-blue-800 p-2 rounded-lg no-underline hover:no-underline"
+                  className="
+                    flex justify-between w-full p-2 rounded-lg no-underline hover:no-underline
+                    data-[state=open]:bg-blue-200 data-[state=open]:dark:bg-blue-800
+                  "
                 >
                   <div className="flex w-full justify-between pr-4 font-bold">
-                    <p className="no-underline">{subject.name}</p>
+                    <p className="no-underline text-black dark:text-white">{subject.name}</p>
                     <div className="flex gap-1">
                       <DialogInfoRelevance relevance={subject.relevance} />
                     </div>
                   </div>
                 </AccordionTrigger>
+
                 <AccordionContent className="w-full font-bold px-2 space-y-4">
                   {subject.topics
                     .filter((topic) => topic.active === true)
@@ -78,7 +86,7 @@ export default function SubjectsList() {
                         key={topic.id}
                         className="flex justify-between items-start"
                       >
-                        <p className="text-sm text-left font-normal">
+                        <p className="text-sm text-left font-normal text-gray-800 dark:text-gray-300">
                           {topic.name}
                         </p>
                         <DialogInfoRelevance relevance={topic.relevance} />

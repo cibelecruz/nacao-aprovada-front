@@ -42,7 +42,7 @@ export default function MoreTask() {
 
   return (
     <div className="md:flex md:justify-center sm:p-auto p-4">
-      <div className="max-sm:w-full md:w-[calc(50%+200px)] max-md:mt-5 p-4 space-y-8 rounded-lg bg-blue-900">
+      <div className="max-sm:w-full md:w-[calc(50%+200px)] max-md:mt-5 p-4 space-y-8 rounded-lg bg-[#f3e3c2] dark:bg-blue-900">
         <div className="flex items-center justify-between">
           <button
             onClick={() => {

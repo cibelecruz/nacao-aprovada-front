@@ -85,7 +85,7 @@ export default function HomeStudent() {
     <>
       <div className="flex justify-center sm:p-auto min-h-max p-4 pb-36">
         <div className="mt-10  space-y-8">
-          <h1 className="font-bold text-xl">
+          <h1 className="font-bold text-xl text-black dark:text-zinc-300">
             {!isLoadingAuth ? messageForUser : 'Carregando...'}
           </h1>
 

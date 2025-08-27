@@ -63,37 +63,37 @@ export default function RootLayout({
 
   const studentButtons = [
     {
-      icon: <LayoutPanelLeft className="z-10 relative size-6" />,
+      icon: <LayoutPanelLeft className="z-10 relative size-6 dark:text-white text-black" />,
       href: '/student',
       title: 'Menu',
     },
     {
-      icon: <Calendar className="z-10 relative size-6" />,
+      icon: <Calendar className="z-10 relative size-6  dark:text-white text-black " />,
       href: '/student/scheduled-tasks',
       title: 'Cronograma',
     },
     {
-      icon: <Settings className="z-10 relative size-6" />,
+      icon: <Settings className="z-10 relative size-6 dark:text-white text-black" />,
       href: '/student/settings',
       title: 'Configurações',
     },
     {
-      icon: <ChartNoAxesColumn className="z-10 relative size-6" />,
+      icon: <ChartNoAxesColumn className="z-10 relative size-6 dark:text-white text-black" />,
       href: '/student/performance-screen',
       title: 'Desempenho',
     },
     {
-      icon: <Folder className="z-10 relative size-6" />,
+      icon: <Folder className="z-10 relative size-6 dark:text-white text-black" />,
       href: '/student/subjects-list',
       title: 'Edital',
     },
     {
-      icon: <FileText className="z-10 relative size-6" />,
+      icon: <FileText className="z-10 relative size-6 dark:text-white text-black" />,
       href: '/student/simulations',
       title: 'Simulados',
     },
     {
-      icon: <BookOpenText className="z-10 relative size-6" />,
+      icon: <BookOpenText className="z-10 relative size-6 dark:text-white text-black" />,
       href: '/student/help',
       title: 'Central de Ajuda',
     },
@@ -115,7 +115,7 @@ export default function RootLayout({
       className={
         (roboto.className,
         inter.className,
-        'w-screen min-h-screen h-max antialiased text-zinc-50 overflow-hidden')
+        'w-screen min-h-screen h-max dark:bg-blue-950 bg-[#f9ebd4] antialiased text-zinc-50 overflow-hidden')
       }
     >
       <CourseSelected>

@@ -9,7 +9,12 @@ interface GoalCardProps {
 
 export function GoalCard({ icon, goal, label }: GoalCardProps) {
   return (
-    <div className="bg-blue-800  max-sm:w-24 w-32 max-sm:p-2 p-4 rounded-2xl flex flex-col items-center gap-3">
+    <div
+      className="max-sm:w-24 w-32 max-sm:p-2 p-4 rounded-2xl 
+                 flex flex-col items-center gap-3
+                 bg-white text-black 
+                 dark:bg-[#070E17] dark:text-white"
+    >
       <Image
         priority
         width={64}

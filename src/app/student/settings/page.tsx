@@ -116,22 +116,34 @@ export default function SettingsPage() {
       <div className="mt-5 md:w-1/2 lg:w-3/5 md:space-y-8 max-sm:space-y-4">
         <TitlePage title="Configurações" className="text-yellow-600" />
 
-        <div className="w-full border border-blue-400/60 bg-blue-950/10 p-4 rounded-xl space-y-10">
+        {/* Card Alterar Data de Início */}
+        <div className="w-full border border-blue-400/60 bg-[#f6e6c1] dark:bg-blue-950/10 p-4 rounded-xl space-y-10">
           <div className="space-y-2">
-            <h2 className="font-bold text-xl">Alterar Data de Início</h2>
-            <p className="text-gray-200">
+            <h2 className="font-bold text-xl dark:text-white text-black">
+              Alterar Data de Início
+            </h2>
+            <p className="dark:text-white text-black">
               Altere a data de início dos seus estudos aqui.
             </p>
           </div>
 
           <form className="space-y-4">
-            <fieldset className="border border-blue-400 rounded w-max">
-              <legend className="text-sm text-blue-300">Data de Início</legend>
+            <fieldset className="border rounded w-max border-blue-300 dark:border-blue-400/50">
+              <legend className="text-sm text-blue-700 dark:text-blue-300">
+                Data de Início
+              </legend>
               <input
                 type="date"
                 value={inputValue}
                 onChange={handleInputChange}
-                className="bg-transparent w-full p-1 outline-none text-zinc-400 placeholder:text-zinc-400"
+                className="
+                  w-full px-3 py-2 rounded-md
+                  border border-gray-300 text-gray-900 bg-white
+                  placeholder:text-gray-500
+                  focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none
+                  dark:bg-zinc-900 dark:border-zinc-700 dark:text-gray-200
+                  dark:placeholder:text-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-400
+                "
                 placeholder="Data de Início"
               />
             </fieldset>
@@ -145,10 +157,13 @@ export default function SettingsPage() {
           </form>
         </div>
 
-        <div className="bg-[#070E17] rounded-xl p-4 space-y-7">
+        {/* Card Metas de Estudo */}
+        <div className="rounded-xl p-4 space-y-7 border
+                        bg-[#f6e6c1] border-blue-300
+                        dark:bg-[#070E17] dark:border-blue-900/40">
           <div className="space-y-2">
-            <h2 className="font-bold text-xl">Metas de Estudo</h2>
-            <p className="text-sm text-gray-200">
+            <h2 className="font-bold text-xl text-black dark:text-white">Metas de Estudo</h2>
+            <p className="text-sm text-gray-800 dark:text-gray-300">
               Configure as suas metas semanais de estudo.
             </p>
           </div>
@@ -180,18 +195,23 @@ export default function SettingsPage() {
           </CancelButton>
         </div>
 
-        <div className="bg-[#070E17] rounded-xl p-4 space-y-7">
+        {/* Card Frequência de E-mails */}
+        <div className="rounded-xl p-4 space-y-7 border
+                        bg-[#f6e6c1] border-blue-300
+                        dark:bg[#070E17] dark:bg-[#070E17] dark:border-blue-900/40">
           <div className="space-y-2">
-            <h2 className="font-bold text-xl">
+            <h2 className="font-bold text-xl text-black dark:text-white">
               Escolha a Frequência dos E-mails
             </h2>
-            <p className="text-sm text-gray-200">
+            <p className="text-sm text-gray-800 dark:text-gray-300">
               Defina a frequência dos e-mails sobre seu desempenho.
             </p>
           </div>
 
           <Select onValueChange={(value: string) => setFrequency(value)}>
-            <SelectTrigger className="w-max border-yellow-600">
+            <SelectTrigger className="w-max rounded-md px-3 py-2 border
+                                      bg-white text-gray-900 border-gray-300
+                                      dark:bg-zinc-900 dark:text-gray-200 dark:border-zinc-700">
               {frequency === 'weekly'
                 ? 'Semanalmente'
                 : frequency === 'monthly'
@@ -205,7 +225,9 @@ export default function SettingsPage() {
                         : 'Escolha a frequência'}
             </SelectTrigger>
 
-            <SelectContent className="bg-blue-800 text-white font-normal text-base md:text-sm">
+            <SelectContent className="font-normal text-base md:text-sm border
+                                      bg-white text-slate-900 border-gray-200
+                                      dark:bg-blue-800 dark:text-white dark:border-blue-700">
               <SelectItem value="weekly">Semanalmente</SelectItem>
               <SelectItem value="monthly">Mensalmente</SelectItem>
               <SelectItem value="Bimonthly">Bimestralmente</SelectItem>
