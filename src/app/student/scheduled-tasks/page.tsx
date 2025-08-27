@@ -105,7 +105,10 @@ export default function ScheduledTasks() {
   return (
     <div className="md:flex md:justify-center sm:p-auto min-h-max p-4 pb-36 overflow-y-scroll scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent active:scrollbar-thumb-yellow-600">
       <div className="max-sm:w-full md:w-1/2 lg:w-3/5 mt-5">
-        <TitlePage title="Cronograma" className="dark:text-yellow-600 text-black" />
+        <TitlePage
+          title="Cronograma"
+          className="dark:text-yellow-600 text-black"
+        />
         <div className="w-full p-2 mt-8 rounded-lg flex flex-col items-center dark:bg-[#070E17] bg-[#f9e5bc]">
           <div className="flex items-end gap-2 justify-center">
             <button onClick={goToPreviousWeek}>

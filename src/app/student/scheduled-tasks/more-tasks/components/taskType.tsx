@@ -56,7 +56,10 @@ export function TaskType({
   ]
   return (
     <>
-      <TitlePage title="Que tipo de atividade deseja adicionar no seu dia?" className='dark:text-white text-black' />
+      <TitlePage
+        title="Que tipo de atividade deseja adicionar no seu dia?"
+        className="dark:text-white text-black"
+      />
       <Select onValueChange={handleOnChangeCourse}>
         <SelectTrigger className="w-max border-blue-500/30 flex gap-4 dark:text-white text-black">
           {course?.name}

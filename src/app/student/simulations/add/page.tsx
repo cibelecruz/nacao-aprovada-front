@@ -166,7 +166,9 @@ export default function CreateExam() {
           {/* Matérias */}
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <label className="text-gray-800 dark:text-gray-300">Matérias</label>
+              <label className="text-gray-800 dark:text-gray-300">
+                Matérias
+              </label>
               <ConfirmButton
                 onClick={addSubject}
                 className="flex items-center text-black dark:text-black"

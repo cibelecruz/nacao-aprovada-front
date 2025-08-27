@@ -165,9 +165,11 @@ export default function PerformanceScreenPage() {
         <TitlePage className="text-yellow-600" title="Desempenho" />
 
         {/* Container principal */}
-        <div className="rounded-xl p-5 space-y-8
+        <div
+          className="rounded-xl p-5 space-y-8
                         bg-[#f6e6c1] border border-blue-300 text-black
-                        dark:bg-[#070E17] dark:border-blue-900/40 dark:text-white">
+                        dark:bg-[#070E17] dark:border-blue-900/40 dark:text-white"
+        >
           {/* Cabeçalho */}
           <div className="flex justify-between items-center">
             <h1 className="ml-2 text-xl">{currentUser?.displayName}</h1>
@@ -226,9 +228,13 @@ export default function PerformanceScreenPage() {
           </div>
 
           {/* Estatística */}
-          <div className="space-y-10 p-4 flex-1 rounded-xl border 
-                          border-blue-300 dark:border-blue-400/50">
-            <p className="font-bold text-lg text-black dark:text-white">Estatística</p>
+          <div
+            className="space-y-10 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50"
+          >
+            <p className="font-bold text-lg text-black dark:text-white">
+              Estatística
+            </p>
 
             <div className="max-sm:grid max-sm:grid-cols-2 md:flex gap-4">
               <SimpleCard label="Assuntos revisados" value={0} />
@@ -249,9 +255,13 @@ export default function PerformanceScreenPage() {
           </div>
 
           {/* Índice de acertos */}
-          <div className="space-y-5 p-4 flex-1 rounded-xl border 
-                          border-blue-300 dark:border-blue-400/50">
-            <p className="font-bold text-lg text-black dark:text-white">Índice de acertos</p>
+          <div
+            className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50"
+          >
+            <p className="font-bold text-lg text-black dark:text-white">
+              Índice de acertos
+            </p>
 
             <ProgressContainer
               indicatorColor="bg-yellow-600"
@@ -266,12 +276,16 @@ export default function PerformanceScreenPage() {
             <div className="flex gap-4">
               <div className="flex gap-2 items-center">
                 <div className="h-4 w-4 rounded bg-yellow-600" />
-                <p className="text-xs text-gray-800 dark:text-gray-300">Meu desempenho</p>
+                <p className="text-xs text-gray-800 dark:text-gray-300">
+                  Meu desempenho
+                </p>
               </div>
 
               <div className="flex gap-2 items-center">
                 <div className="h-4 w-4 rounded bg-blue-600" />
-                <p className="text-xs text-gray-800 dark:text-gray-300">Concorrentes</p>
+                <p className="text-xs text-gray-800 dark:text-gray-300">
+                  Concorrentes
+                </p>
               </div>
             </div>
 
@@ -289,10 +303,14 @@ export default function PerformanceScreenPage() {
           </div>
 
           {/* Frequência */}
-          <div className="space-y-5 p-4 flex-1 rounded-xl border 
-                          border-blue-300 dark:border-blue-400/50">
+          <div
+            className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50"
+          >
             <div className="w-full flex justify-between items-center">
-              <p className="font-bold text-lg text-black dark:text-white">Frequência</p>
+              <p className="font-bold text-lg text-black dark:text-white">
+                Frequência
+              </p>
               <p className="text-xs text-gray-800 dark:text-gray-300">
                 Média diária: {averageTimePerDay}
               </p>
@@ -309,9 +327,13 @@ export default function PerformanceScreenPage() {
           </div>
 
           {/* Histórico tarefas */}
-          <div className="space-y-5 p-4 flex-1 rounded-xl border 
-                          border-blue-300 dark:border-blue-400/50">
-            <p className="font-bold text-lg text-black dark:text-white">Histórico das tarefas</p>
+          <div
+            className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50"
+          >
+            <p className="font-bold text-lg text-black dark:text-white">
+              Histórico das tarefas
+            </p>
             <div className="w-full flex lg:justify-end"></div>
 
             <LineChart
@@ -322,9 +344,13 @@ export default function PerformanceScreenPage() {
           </div>
 
           {/* Histórico simulados */}
-          <div className="space-y-5 p-4 flex-1 rounded-xl border 
-                          border-blue-300 dark:border-blue-400/50">
-            <p className="font-bold text-lg text-black dark:text-white">Histórico dos simulados</p>
+          <div
+            className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50"
+          >
+            <p className="font-bold text-lg text-black dark:text-white">
+              Histórico dos simulados
+            </p>
             <div className="w-full flex lg:justify-end"></div>
 
             <SimulationLineChart
@@ -335,9 +361,13 @@ export default function PerformanceScreenPage() {
           </div>
 
           {/* Pie chart */}
-          <div className="space-y-5 p-4 flex-1 rounded-xl border 
-                          border-blue-300 dark:border-blue-400/50">
-            <p className="font-bold text-lg text-black dark:text-white">{courseName}</p>
+          <div
+            className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50"
+          >
+            <p className="font-bold text-lg text-black dark:text-white">
+              {courseName}
+            </p>
             <p className="font-normal text-base text-gray-800 dark:text-gray-300">
               Questões feitas por disciplina
             </p>
@@ -348,9 +378,13 @@ export default function PerformanceScreenPage() {
           </div>
 
           {/* Tabela por disciplina */}
-          <div className="space-y-5 p-4 flex-1 rounded-xl border 
-                          border-blue-300 dark:border-blue-400/50">
-            <p className="font-bold text-lg text-black dark:text-white">{courseName}</p>
+          <div
+            className="space-y-5 p-4 flex-1 rounded-xl border 
+                          border-blue-300 dark:border-blue-400/50"
+          >
+            <p className="font-bold text-lg text-black dark:text-white">
+              {courseName}
+            </p>
             <p className="font-normal text-base text-gray-800 dark:text-gray-300">
               Questões feitas por disciplina
             </p>

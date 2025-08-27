@@ -19,8 +19,11 @@ export function DropDownRelevance({
 }: DropDownRelevanceProps) {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger onClick={(e) => e.stopPropagation()}  asChild>
-        <button onClick={(e) => e.stopPropagation()} className="flex items-center w-10 h-8 justify-center gap-2 text-black dark:text-white border border-gray-400 rounded-md py-1 px-2 hover:text-yellow-700">
+      <DropdownMenuTrigger onClick={(e) => e.stopPropagation()} asChild>
+        <button
+          onClick={(e) => e.stopPropagation()}
+          className="flex items-center w-10 h-8 justify-center gap-2 text-black dark:text-white border border-gray-400 rounded-md py-1 px-2 hover:text-yellow-700"
+        >
           {relevance} <ChevronDown size={17} />
         </button>
       </DropdownMenuTrigger>

@@ -24,7 +24,9 @@ export function SelectedDateHeader({ selectedDate }: SelectedDateProps) {
         className="text-white border md:px-4 text-sm gap-2 sm:px-4  border-yellow-600 rounded-full max-sm:h-10 max-sm:w-10 flex items-center justify-center hover:border-yellow-500 transition-all"
       >
         <Plus className="text-yellow-600" />
-        <span className="max-sm:hidden dark:text-white text-black">Adicionar Atividade</span>
+        <span className="max-sm:hidden dark:text-white text-black">
+          Adicionar Atividade
+        </span>
       </button>
     </div>
   )
