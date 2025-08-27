@@ -148,7 +148,9 @@ export default function DialogInfoRelevance({
 
         <DialogFooter className="ml-auto">
           <DialogClose asChild>
-            <button className="text-sm font-bold text-black dark:text-blue-300">Fechar</button>
+            <button className="text-sm font-bold text-black dark:text-blue-300">
+              Fechar
+            </button>
           </DialogClose>
         </DialogFooter>
       </DialogContent>

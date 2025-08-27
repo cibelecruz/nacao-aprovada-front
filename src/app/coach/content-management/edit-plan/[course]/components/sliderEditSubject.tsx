@@ -65,11 +65,14 @@ export function SliderEditSubject({
               className="bg-gray-700 size-6 mt-1 border-gray-400 data-[state=checked]:bg-yellow-600 data-[state=checked]:border-yellow-600"
             />
           </div>
-            <DropDownRelevance
-              relevance={relevanceSubject}
-              setRelevance={setRelevanceSubject}
-            />
-          <AccordionTrigger onClick={(e) => e.stopPropagation()}  className="text-lg absolute inset-0 flex items-center">
+          <DropDownRelevance
+            relevance={relevanceSubject}
+            setRelevance={setRelevanceSubject}
+          />
+          <AccordionTrigger
+            onClick={(e) => e.stopPropagation()}
+            className="text-lg absolute inset-0 flex items-center"
+          >
             <p className="pl-24 text-black dark:text-white">{subject.name}</p>
           </AccordionTrigger>
         </div>

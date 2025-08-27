@@ -29,12 +29,7 @@ export function CardPerformance({ title, icon, label }: CardPerformanceProps) {
 
       <div className="flex items-center gap-4 pl-3">
         <div className="size-8">
-          <Image
-            width={128}
-            height={128}
-            src={icon}
-            alt="Emblema"
-          />
+          <Image width={128} height={128} src={icon} alt="Emblema" />
         </div>
         <p className="text-sm font-bold">{label}</p>
       </div>

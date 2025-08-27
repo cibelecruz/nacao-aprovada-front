@@ -158,11 +158,15 @@ export default function SettingsPage() {
         </div>
 
         {/* Card Metas de Estudo */}
-        <div className="rounded-xl p-4 space-y-7 border
+        <div
+          className="rounded-xl p-4 space-y-7 border
                         bg-[#f6e6c1] border-blue-300
-                        dark:bg-[#070E17] dark:border-blue-900/40">
+                        dark:bg-[#070E17] dark:border-blue-900/40"
+        >
           <div className="space-y-2">
-            <h2 className="font-bold text-xl text-black dark:text-white">Metas de Estudo</h2>
+            <h2 className="font-bold text-xl text-black dark:text-white">
+              Metas de Estudo
+            </h2>
             <p className="text-sm text-gray-800 dark:text-gray-300">
               Configure as suas metas semanais de estudo.
             </p>
@@ -196,9 +200,11 @@ export default function SettingsPage() {
         </div>
 
         {/* Card Frequência de E-mails */}
-        <div className="rounded-xl p-4 space-y-7 border
+        <div
+          className="rounded-xl p-4 space-y-7 border
                         bg-[#f6e6c1] border-blue-300
-                        dark:bg[#070E17] dark:bg-[#070E17] dark:border-blue-900/40">
+                        dark:bg[#070E17] dark:bg-[#070E17] dark:border-blue-900/40"
+        >
           <div className="space-y-2">
             <h2 className="font-bold text-xl text-black dark:text-white">
               Escolha a Frequência dos E-mails
@@ -209,9 +215,11 @@ export default function SettingsPage() {
           </div>
 
           <Select onValueChange={(value: string) => setFrequency(value)}>
-            <SelectTrigger className="w-max rounded-md px-3 py-2 border
+            <SelectTrigger
+              className="w-max rounded-md px-3 py-2 border
                                       bg-white text-gray-900 border-gray-300
-                                      dark:bg-zinc-900 dark:text-gray-200 dark:border-zinc-700">
+                                      dark:bg-zinc-900 dark:text-gray-200 dark:border-zinc-700"
+            >
               {frequency === 'weekly'
                 ? 'Semanalmente'
                 : frequency === 'monthly'
@@ -225,9 +233,11 @@ export default function SettingsPage() {
                         : 'Escolha a frequência'}
             </SelectTrigger>
 
-            <SelectContent className="font-normal text-base md:text-sm border
+            <SelectContent
+              className="font-normal text-base md:text-sm border
                                       bg-white text-slate-900 border-gray-200
-                                      dark:bg-blue-800 dark:text-white dark:border-blue-700">
+                                      dark:bg-blue-800 dark:text-white dark:border-blue-700"
+            >
               <SelectItem value="weekly">Semanalmente</SelectItem>
               <SelectItem value="monthly">Mensalmente</SelectItem>
               <SelectItem value="Bimonthly">Bimestralmente</SelectItem>

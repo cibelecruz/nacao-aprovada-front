@@ -71,7 +71,9 @@ export default function SubjectsList() {
                   "
                 >
                   <div className="flex w-full justify-between pr-4 font-bold">
-                    <p className="no-underline text-black dark:text-white">{subject.name}</p>
+                    <p className="no-underline text-black dark:text-white">
+                      {subject.name}
+                    </p>
                     <div className="flex gap-1">
                       <DialogInfoRelevance relevance={subject.relevance} />
                     </div>

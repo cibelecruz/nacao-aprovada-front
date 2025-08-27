@@ -82,7 +82,7 @@ export function Onboarding() {
   return (
     <div className="md:flex md:justify-center sm:p-auto min-h-max p-4 pb-36">
       <div className="mt-10 max-sm:w-full md:w-1/2 md:space-y-8 max-sm:space-y-4">
-        <h1 className='text-black dark:text-white'>
+        <h1 className="text-black dark:text-white">
           Bem-vindo(a), <br />
           <strong>{currentUser?.displayName}</strong>
         </h1>
@@ -97,7 +97,9 @@ export function Onboarding() {
           className="w-full space-y-4"
         >
           <fieldset className="border p-1 border-black dark:border-zinc-400 rounded w-full">
-            <legend className="text-sm text-black dark:text-zinc-300 font-bold">Nome</legend>
+            <legend className="text-sm text-black dark:text-zinc-300 font-bold">
+              Nome
+            </legend>
             <input
               type="text"
               {...register('name')}
@@ -111,7 +113,9 @@ export function Onboarding() {
           )}
 
           <fieldset className="border p-1 border-black dark:border-zinc-400 rounded w-full">
-            <legend className="text-sm font-bold text-black dark:text-zinc-300">Idade</legend>
+            <legend className="text-sm font-bold text-black dark:text-zinc-300">
+              Idade
+            </legend>
             <input
               type="number"
               required
@@ -140,7 +144,9 @@ export function Onboarding() {
           )}
 
           <div>
-            <p className="font-bold text-lg text-black dark:text-white">Você está empregado atualmente?</p>
+            <p className="font-bold text-lg text-black dark:text-white">
+              Você está empregado atualmente?
+            </p>
             <div className="mt-2">
               <label className="inline-flex items-center mr-4">
                 <input
@@ -182,7 +188,12 @@ export function Onboarding() {
             </fieldset>
           ) : null}
 
-          <ButtonFill className='md:w-full' label="Próximo" type="submit" disabled={false} />
+          <ButtonFill
+            className="md:w-full"
+            label="Próximo"
+            type="submit"
+            disabled={false}
+          />
         </form>
       </div>
     </div>

@@ -41,7 +41,7 @@ export function EditTopics({
           defaultChecked={topicIsActive}
           onCheckedChange={(value) => setTopicIsActive(value)}
         />
-        <p className='text-black dark:text-white'>{topic.name}</p>
+        <p className="text-black dark:text-white">{topic.name}</p>
       </div>
       <DropDownRelevance
         relevance={topicRelevance}

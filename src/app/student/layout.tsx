@@ -63,37 +63,51 @@ export default function RootLayout({
 
   const studentButtons = [
     {
-      icon: <LayoutPanelLeft className="z-10 relative size-6 dark:text-white text-black" />,
+      icon: (
+        <LayoutPanelLeft className="z-10 relative size-6 dark:text-white text-black" />
+      ),
       href: '/student',
       title: 'Menu',
     },
     {
-      icon: <Calendar className="z-10 relative size-6  dark:text-white text-black " />,
+      icon: (
+        <Calendar className="z-10 relative size-6  dark:text-white text-black " />
+      ),
       href: '/student/scheduled-tasks',
       title: 'Cronograma',
     },
     {
-      icon: <Settings className="z-10 relative size-6 dark:text-white text-black" />,
+      icon: (
+        <Settings className="z-10 relative size-6 dark:text-white text-black" />
+      ),
       href: '/student/settings',
       title: 'Configurações',
     },
     {
-      icon: <ChartNoAxesColumn className="z-10 relative size-6 dark:text-white text-black" />,
+      icon: (
+        <ChartNoAxesColumn className="z-10 relative size-6 dark:text-white text-black" />
+      ),
       href: '/student/performance-screen',
       title: 'Desempenho',
     },
     {
-      icon: <Folder className="z-10 relative size-6 dark:text-white text-black" />,
+      icon: (
+        <Folder className="z-10 relative size-6 dark:text-white text-black" />
+      ),
       href: '/student/subjects-list',
       title: 'Edital',
     },
     {
-      icon: <FileText className="z-10 relative size-6 dark:text-white text-black" />,
+      icon: (
+        <FileText className="z-10 relative size-6 dark:text-white text-black" />
+      ),
       href: '/student/simulations',
       title: 'Simulados',
     },
     {
-      icon: <BookOpenText className="z-10 relative size-6 dark:text-white text-black" />,
+      icon: (
+        <BookOpenText className="z-10 relative size-6 dark:text-white text-black" />
+      ),
       href: '/student/help',
       title: 'Central de Ajuda',
     },

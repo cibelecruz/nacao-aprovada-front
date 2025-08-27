@@ -78,9 +78,11 @@ export default function SimulationsPage() {
         </div>
 
         {/* Card de filtros + lista */}
-        <div className="rounded-lg p-5 
+        <div
+          className="rounded-lg p-5 
                         bg-[#f6e6c1] border border-blue-300
-                        dark:bg-[#070E17] dark:border-blue-900/40">
+                        dark:bg-[#070E17] dark:border-blue-900/40"
+        >
           {/* Filtros */}
           <div className="grid md:grid-cols-[1fr,auto,auto] gap-4 mb-8 py-4 max-md:space-y-4">
             {/* Busca */}
@@ -149,9 +151,11 @@ export default function SimulationsPage() {
           </div>
 
           {/* Lista / Tabela */}
-          <div className="lg:rounded-xl lg:p-4 
+          <div
+            className="lg:rounded-xl lg:p-4 
                           lg:bg-[#f6e6c1] lg:border lg:border-blue-300
-                          dark:lg:bg-blue-800 dark:lg:border-blue-700">
+                          dark:lg:bg-blue-800 dark:lg:border-blue-700"
+          >
             {filteredData.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-12 px-4">
                 <p className="text-gray-800 dark:text-gray-300 text-lg">
