@@ -33,7 +33,7 @@ export function EditTopics({
 
   return (
     <div
-      className="flex justify-between hover:bg-gray-700 py-2 px-1"
+      className="flex justify-between rounded-xl hover:bg-[#f8dda5] dark:hover:bg-gray-700 py-2 px-1"
       key={topic.id}
     >
       <div className="flex items-center gap-2">
@@ -41,7 +41,7 @@ export function EditTopics({
           defaultChecked={topicIsActive}
           onCheckedChange={(value) => setTopicIsActive(value)}
         />
-        <p>{topic.name}</p>
+        <p className='text-black dark:text-white'>{topic.name}</p>
       </div>
       <DropDownRelevance
         relevance={topicRelevance}

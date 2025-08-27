@@ -64,7 +64,7 @@ export function DialogFinishedTask({
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>{triggerButton}</DialogTrigger>
 
-      <DialogContent className="bg-[#050c16] border-none rounded-3xl w-max lg:w-1/4">
+      <DialogContent className="dark:bg-[#050c16] border-none rounded-3xl w-max lg:w-1/4">
         {openClockPicker ? (
           <AnalogClock
             setOpenClockPicker={setOpenClockPicker}
@@ -79,14 +79,14 @@ export function DialogFinishedTask({
               <DialogTitle className="text-yellow-600">
                 Tempo gasto na atividade
               </DialogTitle>
-              <DialogDescription className="text-zinc-50">
+              <DialogDescription className="text-black dark:text-zinc-50">
                 Confirme abaixo o tempo gasto nessa atividade
               </DialogDescription>
             </DialogHeader>
 
             <div className="flex justify-center">
               <button
-                className="border border-blue-400/30 hover:border-yellow-500 px-4 py-1 rounded-2xl bg-blue-900 transition-all"
+                className="border border-black dark:border-blue-400/30 hover:border-yellow-500 px-4 py-1 rounded-2xl dark:bg-blue-900 text-black dark:text-white transition-all"
                 onClick={() => setOpenClockPicker(true)}
               >
                 {`${String(selectedTime.hours).padStart(2, '0')}:${String(

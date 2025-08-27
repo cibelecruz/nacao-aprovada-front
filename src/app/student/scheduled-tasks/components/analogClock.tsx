@@ -45,9 +45,9 @@ export default function AnalogClock({
   return (
     <div className="flex flex-col items-center text-left space-y-8">
       <div className="w-full text-left">
-        <h1 className="text-white">Tempo Gasto na Atividade</h1>
+        <h1 className="text-black dark:text-white">Tempo Gasto na Atividade</h1>
       </div>
-      <div className="text-2xl w-full text-white flex justify-center items-center gap-2">
+      <div className="text-2xl w-full text-black dark:text-white flex justify-center items-center gap-2">
         <input
           onFocus={() => setShowMinutes(false)}
           onChange={(event) => {
@@ -135,7 +135,7 @@ function HourClock({ hours, onClick }: HourClockProps) {
   const pointerRotation = hours !== null ? (hours % 12) * 30 : 0
 
   return (
-    <div className="relative w-64 h-64 bg-gray-800 rounded-full border-4 border-gray-600">
+    <div className="relative w-64 h-64 bg-white dark:bg-gray-800 rounded-full border-4 border-black dark:border-gray-600">
       {Array.from({ length: 12 }).map((_, index) => {
         const number = index === 0 ? 12 : index
         const angle = (index * 360) / 12 - 90
@@ -145,7 +145,7 @@ function HourClock({ hours, onClick }: HourClockProps) {
         return (
           <button
             key={number}
-            className={`absolute text-white text-lg font-bold rounded-full w-10 h-10 flex items-center justify-center ${
+            className={`absolute text-black dark:text-white text-lg font-bold rounded-full w-10 h-10 flex items-center justify-center ${
               hours === number ? 'bg-gray-700' : 'hover:bg-gray-700'
             } focus:outline-none`}
             style={{
@@ -183,7 +183,7 @@ function MinuteClock({ minutes, onClick }: MinuteClockProps) {
   const pointerRotation = minutes !== null ? minutes * 6 : 0
 
   return (
-    <div className="relative w-64 h-64 bg-gray-800 rounded-full border-4 border-gray-600">
+    <div className="relative w-64 h-64 bg-white dark:bg-gray-800 rounded-full border-4 border-black dark:border-gray-600">
       {Array.from({ length: 12 }).map((_, index) => {
         const number = index * 5
         const angle = (index * 360) / 12 - 90
@@ -193,7 +193,7 @@ function MinuteClock({ minutes, onClick }: MinuteClockProps) {
         return (
           <button
             key={number}
-            className={`absolute text-white text-lg font-bold rounded-full w-10 h-10 flex items-center justify-center ${
+            className={`absolute text-black dark:text-white text-lg font-bold rounded-full w-10 h-10 flex items-center justify-center ${
               minutes === number ? 'bg-gray-700' : 'hover:bg-gray-700'
             } focus:outline-none`}
             style={{

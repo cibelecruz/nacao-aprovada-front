@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="pt-br" translate="no">
       <body
         className={
-          'font-roboto antialiased text-lg bg-white dark:bg-blue-950 text-zinc-50 overflow-x-hidden'
+          'font-roboto antialiased text-lg bg-[#F9EBD4] dark:bg-blue-950 text-zinc-50 overflow-x-hidden'
         }
       >
         <ThemeProvider

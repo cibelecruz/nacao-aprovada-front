@@ -17,7 +17,7 @@ export function Header({
   isStudent = false,
 }: HeaderProps) {
   return (
-    <header className="fixed w-full z-50 md:px-5 pt-5 p-3 bg-white dark:bg-blue-950 flex justify-between items-center">
+    <header className="fixed w-full z-50 md:px-5 pt-5 p-3 bg-[#F9EBD4] dark:bg-blue-950 flex justify-between items-center">
       <div />
       <div className="flex gap-4 items-center">
         <ToggleThemeButton />
