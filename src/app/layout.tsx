@@ -28,17 +28,10 @@ export default function RootLayout({
         }
       >
         <ThemeProvider
-<<<<<<< HEAD
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-=======
            attribute="class"
            defaultTheme="dark"
            enableSystem
            disableTransitionOnChange
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
         >
           <NotificationProvider>
             <AuthProvider>

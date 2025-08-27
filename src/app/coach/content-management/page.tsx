@@ -125,29 +125,13 @@ export default function ContentManagement() {
           <div className="flex gap-4">
             <button
               onClick={() => handleTabChange(false)}
-<<<<<<< HEAD
-              className={
-                !activeTab
-                  ? 'text-yellow-500 dark:text-yellow-700'
-                  : 'text-zinc-600 dark:text-white'
-              }
-=======
               className={!activeTab ? 'text-yellow-500 dark:text-yellow-700' : 'text-zinc-600 dark:text-white'}
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
             >
               Disciplinas
             </button>
             <button
               onClick={() => handleTabChange(true)}
-<<<<<<< HEAD
-              className={
-                activeTab
-                  ? 'text-yellow-500 dark:text-yellow-700'
-                  : 'text-zinc-600 dark:text-white'
-              }
-=======
               className={activeTab ? 'text-yellow-500 dark:text-yellow-700' : 'text-zinc-600 dark:text-white'}
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
             >
               Planos de Estudo
             </button>

@@ -1,4 +1,4 @@
-import CancelButton from '@/app/_components/cancelButton'
+  import CancelButton from '@/app/_components/cancelButton'
 import ConfirmButton from '@/app/_components/confirmButton'
 import {
   Dialog,
@@ -58,11 +58,7 @@ export function DialogDeleteSubjectCourse({
         className="bg-white text-gray-600 dark:text-white dark:bg-[#050c16] border-none rounded-3xl w-max lg:w-1/4"
       >
         <DialogHeader>
-<<<<<<< HEAD
-          <DialogTitle className="text-black dark:text-white">
-=======
           <DialogTitle className='text-black dark:text-white'>
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
             Desejar excluir {isSubject ? 'a disciplina' : 'o plano de estudos'}?
           </DialogTitle>
         </DialogHeader>

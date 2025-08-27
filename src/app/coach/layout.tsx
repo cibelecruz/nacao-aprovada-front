@@ -38,58 +38,28 @@ export default function RootLayout({
 
   const studentButtons = [
     {
-<<<<<<< HEAD
-      icon: (
-        <List className="z-10 relative size-6 text-black dark:text-white" />
-      ),
-=======
       icon: <List className="z-10 relative size-6 text-black dark:text-white" />,
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
       href: '/coach',
       title: 'Tabela de alunos',
     },
     {
-<<<<<<< HEAD
-      icon: (
-        <Settings className="z-10 relative size-6 text-black dark:text-white" />
-      ),
-=======
       icon: <Settings className="z-10 relative size-6 text-black dark:text-white" />,
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
       href: '/coach/content-management',
       title: 'Gerenciamento de conteúdo',
     },
 
     {
-<<<<<<< HEAD
-      icon: (
-        <UserRoundPlus className="z-10 relative size-6 text-black dark:text-white" />
-      ),
-=======
       icon: <UserRoundPlus className="z-10 relative size-6 text-black dark:text-white" />,
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
       href: '/coach/student-registration',
       title: 'Cadastro de aluno',
     },
     {
-<<<<<<< HEAD
-      icon: (
-        <Bell className="z-10 relative size-6 text-black dark:text-white" />
-      ),
-=======
       icon: <Bell className="z-10 relative size-6 text-black dark:text-white" />,
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
       href: '/coach/notifications-maneger',
       title: 'Gerenciamento de notificações',
     },
     {
-<<<<<<< HEAD
-      icon: (
-        <BookOpenText className="z-10 relative size-6 text-black dark:text-white" />
-      ),
-=======
       icon: <BookOpenText className="z-10 relative size-6 text-black dark:text-white" />,
->>>>>>> 76d27db67be57b96513a92ac4cb4b0d29bca574c
       href: '/coach/help-content',
       title: 'Gerenciar conteúdo de ajuda',
     },
